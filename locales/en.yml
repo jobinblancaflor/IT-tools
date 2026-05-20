@@ -392,3 +392,17 @@ tools:
   text-to-binary:
     title: Text to ASCII binary
     description: Convert text to its ASCII binary representation and vice-versa.
+blogs:
+  title: Blogs
+  searchPlaceholder: Search blogs...
+  sortBy: Sort by
+  newest: Newest
+  oldest: Oldest
+  az: A-Z
+  za: Z-A
+  readMore: Read more
+  noResults: No blogs found matching your criteria.
+  backToList: Back to list
+  author: Author
+  date: Published on
+  category: Category

@@ -31,6 +31,16 @@ const router = createRouter({
       name: 'about',
       component: () => import('./pages/About.vue'),
     },
+    {
+      path: '/blogs',
+      name: 'blogs',
+      component: () => import('./pages/Blogs.page.vue'),
+    },
+    {
+      path: '/blogs/:slug',
+      name: 'blog-detail',
+      component: () => import('./pages/BlogDetail.page.vue'),
+    },
     ...toolsRoutes,
     ...toolsRedirectRoutes,
     ...(config.app.env === 'development' ? demoRoutes : []),

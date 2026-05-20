@@ -1,8 +1,8 @@
 <script lang="ts" setup>
 import { NIcon, useThemeVars } from 'naive-ui';
 
-import { RouterLink } from 'vue-router';
-import { Heart, Home2, Menu2 } from '@vicons/tabler';
+import { RouterLink, useRoute } from 'vue-router';
+import { Heart, Home2, Menu2, Book } from '@vicons/tabler';
 
 import { storeToRefs } from 'pinia';
 import HeroGradient from '../assets/hero-gradient.svg?component';
@@ -15,6 +15,7 @@ import { useToolStore } from '@/tools/tools.store';
 import { useTracker } from '@/modules/tracker/tracker.services';
 import CollapsibleToolMenu from '@/components/CollapsibleToolMenu.vue';
 
+const route = useRoute();
 const themeVars = useThemeVars();
 const styleStore = useStyleStore();
 const version = config.app.version;
@@ -48,8 +49,15 @@ const tools = computed<ToolCategory[]>(() => [
         </div>
       </RouterLink>
 
-      <div class="sider-content">
-        <div v-if="styleStore.isSmallScreen" flex flex-col items-center>
+        <div class="sider-content">
+          <div mb-12px>
+            <RouterLink to="/blogs" class="nav-item" :class="{ active: route.path === '/blogs' }">
+              <n-icon size="20" :component="Book" />
+              <span ml-12px>{{ $t('blogs.title') }}</span>
+            </RouterLink>
+          </div>
+
+          <div v-if="styleStore.isSmallScreen" flex flex-col items-center>
           <locale-selector w="90%" />
 
           <div flex justify-center>
@@ -195,6 +203,29 @@ const tools = computed<ToolCategory[]>(() => [
     .subtitle {
       font-size: 16px;
     }
+  }
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  height: 42px;
+  margin: 0 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: v-bind('themeVars.textColor2');
+  text-decoration: none;
+
+  &:hover {
+    background-color: v-bind('themeVars.hoverColor');
+    color: v-bind('themeVars.primaryColor');
+  }
+
+  &.active {
+    background-color: v-bind('themeVars.primaryColorSuppl');
+    color: v-bind('themeVars.primaryColor');
   }
 }
 </style>
