@@ -2,7 +2,7 @@
 import { NIcon, useThemeVars } from 'naive-ui';
 
 import { RouterLink, useRoute } from 'vue-router';
-import { Heart, Home2, Menu2, Book } from '@vicons/tabler';
+import { Book, Heart, Home2, Menu2 } from '@vicons/tabler';
 
 import { storeToRefs } from 'pinia';
 import HeroGradient from '../assets/hero-gradient.svg?component';
@@ -49,15 +49,15 @@ const tools = computed<ToolCategory[]>(() => [
         </div>
       </RouterLink>
 
-        <div class="sider-content">
-          <div mb-12px>
-            <RouterLink to="/blogs" class="nav-item" :class="{ active: route.path === '/blogs' }">
-              <n-icon size="20" :component="Book" />
-              <span ml-12px>{{ $t('blogs.title') }}</span>
-            </RouterLink>
-          </div>
+      <div class="sider-content">
+        <div mb-12px>
+          <RouterLink to="/blogs" class="nav-item" :class="{ active: route.path === '/blogs' }">
+            <NIcon size="20" :component="Book" />
+            <span ml-12px>{{ $t('blogs.title') }}</span>
+          </RouterLink>
+        </div>
 
-          <div v-if="styleStore.isSmallScreen" flex flex-col items-center>
+        <div v-if="styleStore.isSmallScreen" flex flex-col items-center>
           <locale-selector w="90%" />
 
           <div flex justify-center>
@@ -68,12 +68,9 @@ const tools = computed<ToolCategory[]>(() => [
         <CollapsibleToolMenu :tools-by-category="tools" />
 
         <div class="footer">
-          <div>
-            
-          </div>
+          <div />
           <div>
             © {{ new Date().getFullYear() }} Armytool
-            
           </div>
         </div>
       </div>
@@ -93,6 +90,12 @@ const tools = computed<ToolCategory[]>(() => [
         <c-tooltip :tooltip="$t('home.home')" position="bottom">
           <c-button to="/" circle variant="text" :aria-label="$t('home.home')">
             <NIcon size="25" :component="Home2" />
+          </c-button>
+        </c-tooltip>
+
+        <c-tooltip :tooltip="$t('blogs.title')" position="bottom">
+          <c-button to="/blogs" circle variant="text" :aria-label="$t('blogs.title')">
+            <NIcon size="25" :component="Book" />
           </c-button>
         </c-tooltip>
 
@@ -126,6 +129,7 @@ const tools = computed<ToolCategory[]>(() => [
         </c-tooltip>
       </div>
       <slot />
+      <AppFooter />
     </template>
   </MenuLayout>
 </template>

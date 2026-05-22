@@ -2,8 +2,8 @@
 import { computed, defineAsyncComponent } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import { useHead } from '@vueuse/head';
-import { NButton, NIcon, NTag, NDivider, NSkeleton } from 'naive-ui';
-import { ChevronLeft, Calendar, User, Tag } from '@vicons/tabler';
+import { NButton, NDivider, NIcon, NSkeleton, NTag } from 'naive-ui';
+import { Calendar, ChevronLeft, Tag, User } from '@vicons/tabler';
 import { blogs } from '@/data/blogs.data';
 
 const route = useRoute();
@@ -24,7 +24,7 @@ useHead({
 });
 
 const BlogContent = computed(() => {
-  if (!blog.value) return null;
+  if (!blog.value) { return null; }
   // Dynamic import of the markdown file
   return defineAsyncComponent({
     loader: () => import(`../blogs/${slug.value}.md`),
@@ -41,62 +41,62 @@ function goBack() {
 </script>
 
 <template>
-  <div class="pt-50px px-20px pb-100px">
-    <div v-if="blog" class="max-w-800px mx-auto">
-      <n-button text class="mb-30px" @click="goBack">
+  <div class="px-20px pb-100px pt-50px">
+    <div v-if="blog" class="mx-auto max-w-800px">
+      <NButton text class="mb-30px" @click="goBack">
         <template #icon>
-          <n-icon :component="ChevronLeft" />
+          <NIcon :component="ChevronLeft" />
         </template>
         {{ t('blogs.backToList') }}
-      </n-button>
+      </NButton>
 
-      <h1 class="text-40px font-800 leading-tight mb-20px">
+      <h1 class="mb-20px text-40px font-800 leading-tight">
         {{ blog.title }}
       </h1>
 
-      <div class="flex flex-wrap items-center gap-20px text-neutral-400 mb-30px">
+      <div class="mb-30px flex flex-wrap items-center gap-20px text-neutral-400">
         <div class="flex items-center gap-6px">
-          <n-icon :component="Calendar" />
+          <NIcon :component="Calendar" />
           {{ t('blogs.date') }}: {{ blog.date }}
         </div>
         <div class="flex items-center gap-6px">
-          <n-icon :component="User" />
+          <NIcon :component="User" />
           {{ t('blogs.author') }}: {{ blog.author }}
         </div>
         <div class="flex items-center gap-6px">
-          <n-icon :component="Tag" />
+          <NIcon :component="Tag" />
           {{ t('blogs.category') }}: {{ blog.category }}
         </div>
       </div>
 
-      <div class="flex flex-wrap gap-8px mb-40px">
-        <n-tag v-for="tag in blog.tags" :key="tag" size="medium" :bordered="false" round type="primary">
+      <div class="mb-40px flex flex-wrap gap-8px">
+        <NTag v-for="tag in blog.tags" :key="tag" size="medium" :bordered="false" round type="primary">
           {{ tag }}
-        </n-tag>
+        </NTag>
       </div>
 
-      <n-divider />
+      <NDivider />
 
-      <article class="blog-content prose dark:prose-invert max-w-none">
+      <article class="blog-content max-w-none prose dark:prose-invert">
         <component :is="BlogContent" v-if="BlogContent" />
       </article>
 
-      <n-divider class="mt-60px" />
+      <NDivider class="mt-60px" />
 
-      <div class="flex justify-center mt-40px">
-        <n-button round type="primary" size="large" @click="goBack">
+      <div class="mt-40px flex justify-center">
+        <NButton round type="primary" size="large" @click="goBack">
           {{ t('blogs.backToList') }}.
-        </n-button>
+        </NButton>
       </div>
     </div>
 
-    <div v-else class="text-center py-100px">
-      <h2 class="text-24px mb-20px">
+    <div v-else class="py-100px text-center">
+      <h2 class="mb-20px text-24px">
         Blog post not found.
       </h2>
-      <n-button type="primary" @click="goBack">
+      <NButton type="primary" @click="goBack">
         {{ t('blogs.backToList') }}
-      </n-button>
+      </NButton>
     </div>
   </div>
 </template>

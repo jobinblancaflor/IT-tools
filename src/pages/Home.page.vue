@@ -33,7 +33,7 @@ function onUpdateFavoriteTools() {
             target="_blank"
             :aria-label="$t('home.follow.githubRepository')"
           >GitHub</a>
-          <!--{{ $t('home.follow.p2') }}
+          <!-- {{ $t('home.follow.p2') }}
           <a
             href="https://x.com/ittoolsdottech"
             rel="noopener"
@@ -41,7 +41,7 @@ function onUpdateFavoriteTools() {
             :aria-label="$t('home.follow.twitterXAccount')"
           >X</a>.
           {{ $t('home.follow.thankYou') }}
-          <n-icon :component="IconHeart" />-->
+          <n-icon :component="IconHeart" /> -->
         </ColoredCard>
       </div>
 
@@ -81,6 +81,26 @@ function onUpdateFavoriteTools() {
       </h3>
       <div class="grid grid-cols-1 gap-12px lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-2 xl:grid-cols-4">
         <ToolCard v-for="tool in toolStore.tools" :key="tool.name" :tool="tool" />
+      </div>
+
+      <div class="mt-50px max-w-800px mx-auto">
+        <h2 class="text-center mb-30px text-2xl font-600">
+          {{ t('faq.title') }}
+        </h2>
+        <n-collapse arrow-placement="right" :default-expanded-names="['1']">
+          <n-collapse-item :title="t('faq.q1')" name="1">
+            <div>{{ t('faq.a1') }}</div>
+          </n-collapse-item>
+          <n-collapse-item :title="t('faq.q2')" name="2">
+            <div>{{ t('faq.a2') }}</div>
+          </n-collapse-item>
+          <n-collapse-item :title="t('faq.q3')" name="3">
+            <div>{{ t('faq.a3') }}</div>
+          </n-collapse-item>
+          <n-collapse-item :title="t('faq.q4')" name="4">
+            <div>{{ t('faq.a4') }}</div>
+          </n-collapse-item>
+        </n-collapse>
       </div>
     </div>
   </div>

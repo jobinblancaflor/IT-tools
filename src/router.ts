@@ -41,6 +41,31 @@ const router = createRouter({
       name: 'blog-detail',
       component: () => import('./pages/BlogDetail.page.vue'),
     },
+    {
+      path: '/contact',
+      name: 'contact',
+      component: () => import('./pages/Contact.page.vue'),
+    },
+    {
+      path: '/privacy-policy',
+      name: 'privacy-policy',
+      component: () => import('./pages/PrivacyPolicy.page.vue'),
+    },
+    {
+      path: '/terms-of-service',
+      name: 'terms-of-service',
+      component: () => import('./pages/TermsOfService.page.vue'),
+    },
+    {
+      path: '/disclaimer',
+      name: 'disclaimer',
+      component: () => import('./pages/Disclaimer.page.vue'),
+    },
+    {
+      path: '/cookie-policy',
+      name: 'cookie-policy',
+      component: () => import('./pages/CookiePolicy.page.vue'),
+    },
     ...toolsRoutes,
     ...toolsRedirectRoutes,
     ...(config.app.env === 'development' ? demoRoutes : []),

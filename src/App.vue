@@ -28,6 +28,7 @@ syncRef(
         <component :is="layout">
           <RouterView />
         </component>
+        <InstallPrompt />
       </NNotificationProvider>
     </NMessageProvider>
   </n-config-provider>

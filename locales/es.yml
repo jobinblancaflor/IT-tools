@@ -24,6 +24,8 @@ home:
     twitterXAccount: 'Cuenta de X de Armytool'
     about: 'Sobre Armytool'
     aboutLabel: 'Sobre'
+    blogs: 'Leer nuestros blogs'
+    blogsLabel: 'Blogs'
     darkMode: 'Modo obscuro'
     lightMode: 'Modo claro'
     mode: 'Alternar modo oscuro/claro'

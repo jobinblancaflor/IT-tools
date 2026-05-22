@@ -24,6 +24,8 @@ home:
     twitterXAccount: 'Armytool X account'
     about: 'About Armytool'
     aboutLabel: 'About'
+    blogs: 'Read our blogs'
+    blogsLabel: 'Blogs'
     darkMode: 'Dark mode'
     lightMode: 'Light mode'
     mode: 'Toggle dark/light mode'
@@ -406,3 +408,33 @@ blogs:
   author: Author
   date: Published on
   category: Category
+contact:
+  title: Contact Us
+  description: Have a question, suggestion, or found a bug? We'd love to hear from you!
+  googleForm: Fill out our contact form
+privacyPolicy:
+  title: Privacy Policy
+termsOfService:
+  title: Terms of Service
+disclaimer:
+  title: Disclaimer
+cookiePolicy:
+  title: Cookie Policy
+faq:
+  title: Frequently Asked Questions
+  q1: Is Armytool free to use?
+  a1: Yes, Armytool is 100% free and open-source.
+  q2: Are my data stored on your servers?
+  a2: No, almost all tools are client-side only. Your data never leaves your browser.
+  q3: How can I support the project?
+  a3: You can support us by sharing the tool, giving us a star on GitHub, or buying us a coffee!
+  q4: Can I request a new tool?
+  a4: Absolutely! You can submit a feature request on our GitHub repository.
+footer:
+  copyright: © {year} Armytool. All rights reserved.
+  links:
+    contact: Contact
+    privacyPolicy: Privacy Policy
+    termsOfService: Terms of Service
+    disclaimer: Disclaimer
+    cookiePolicy: Cookie Policy
