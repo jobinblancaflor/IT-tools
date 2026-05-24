@@ -1,8 +1,20 @@
 import type { GlobalThemeOverrides } from 'naive-ui';
 
 export const lightThemeOverrides: GlobalThemeOverrides = {
+  common: {
+    primaryColor: '#1ea54cFF',
+    primaryColorHover: '#36AD6AFF',
+    primaryColorPressed: '#0C7A43FF',
+    primaryColorSuppl: '#1ea54c20',
+  },
   Menu: {
     itemHeight: '32px',
+    itemColorActive: '#1ea54c20',
+    itemColorActiveHover: '#1ea54c30',
+    itemTextColorActive: '#1ea54cFF',
+    itemTextColorActiveHover: '#1ea54cFF',
+    itemIconColorActive: '#1ea54cFF',
+    itemIconColorActiveHover: '#1ea54cFF',
   },
 
   Layout: { color: '#f1f5f9' },
@@ -19,7 +31,7 @@ export const darkThemeOverrides: GlobalThemeOverrides = {
     primaryColor: '#1ea54cFF',
     primaryColorHover: '#36AD6AFF',
     primaryColorPressed: '#0C7A43FF',
-    primaryColorSuppl: '#36AD6AFF',
+    primaryColorSuppl: '#1ea54c20',
   },
 
   Notification: {
@@ -34,6 +46,12 @@ export const darkThemeOverrides: GlobalThemeOverrides = {
 
   Menu: {
     itemHeight: '32px',
+    itemColorActive: '#1ea54c20',
+    itemColorActiveHover: '#1ea54c30',
+    itemTextColorActive: '#1ea54cFF',
+    itemTextColorActiveHover: '#1ea54cFF',
+    itemIconColorActive: '#1ea54cFF',
+    itemIconColorActiveHover: '#1ea54cFF',
   },
 
   Layout: {

@@ -14,6 +14,7 @@ import type { ToolCategory } from '@/tools/tools.types';
 import { useToolStore } from '@/tools/tools.store';
 import { useTracker } from '@/modules/tracker/tracker.services';
 import CollapsibleToolMenu from '@/components/CollapsibleToolMenu.vue';
+import { blogs } from '@/data/blogs.data';
 
 const route = useRoute();
 const themeVars = useThemeVars();
@@ -30,6 +31,17 @@ const { favoriteTools, toolsByCategory } = storeToRefs(toolStore);
 const tools = computed<ToolCategory[]>(() => [
   ...(favoriteTools.value.length > 0 ? [{ name: t('tools.categories.favorite-tools'), components: favoriteTools.value }] : []),
   ...toolsByCategory.value,
+  {
+    name: t('blogs.title'),
+    components: blogs.map(blog => ({
+      name: blog.title,
+      path: `/blogs/${blog.slug}`,
+      icon: Book,
+      description: blog.description,
+      keywords: blog.tags,
+      isNew: false,
+    })) as any,
+  },
 ]);
 </script>
 
@@ -51,7 +63,7 @@ const tools = computed<ToolCategory[]>(() => [
 
       <div class="sider-content">
         <div mb-12px>
-          <RouterLink to="/blogs" class="nav-item" :class="{ active: route.path === '/blogs' }">
+          <RouterLink to="/blogs" class="nav-item" :class="{ active: route.path.startsWith('/blogs') }">
             <NIcon size="20" :component="Book" />
             <span ml-12px>{{ $t('blogs.title') }}</span>
           </RouterLink>
@@ -230,6 +242,10 @@ const tools = computed<ToolCategory[]>(() => [
   &.active {
     background-color: v-bind('themeVars.primaryColorSuppl');
     color: v-bind('themeVars.primaryColor');
+
+    .n-icon {
+      color: v-bind('themeVars.primaryColor') !important;
+    }
   }
 }
 </style>
