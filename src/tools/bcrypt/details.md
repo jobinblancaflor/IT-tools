@@ -1,76 +1,91 @@
 # Bcrypt: The Industry Standard for Secure Password Hashing
 
 ## What the tool does
-The **Bcrypt Tool** is a cryptographic utility that provides a user-friendly interface for hashing plain-text strings and comparing existing hashes against a specific input. Based on the Blowfish cipher, Bcrypt is a "salted" hashing algorithm that incorporates a "work factor" (or cost) to purposefully slow down the hashing process, making it incredibly resilient to modern brute-force attacks.
+The **Bcrypt Tool** is a high-security cryptographic utility designed to provide a user-friendly interface for the **Bcrypt password hashing function**. Based on the **Blowfish cipher**, Bcrypt is not a simple hash like MD5 or SHA-256; it is an "adaptive" hashing algorithm that incorporates a salt to protect against rainbow table attacks and a "work factor" to slow down brute-force attempts.
 
-This tool allows you to:
-1. **Generate Hashes:** Enter any string (like a test password) and generate a secure Bcrypt hash using a customizable cost factor.
-2. **Verify Passwords:** Take an existing Bcrypt hash (from your database, for example) and check if a plain-text string matches it.
-3. **Control Cost:** Adjust the "rounds" or cost factor to see how it affects the generation time and the resulting hash security.
+Our tool enables three primary security workflows:
+1.  **Secure Hash Generation:** Transform a plain-text password into a collision-resistant, salted hash.
+2.  **Interactive Verification:** Compare a previously generated Bcrypt hash against a plain-text input to verify a match, simulating a backend login process.
+3.  **Cost Factor Calibration:** Adjust the "rounds" (logarithmic cost) to see how it impact generation time, helping developers find the perfect balance between security and server performance.
+
+The resulting hashes follow the standardized modular format (e.g., `$2b$12$S.Vl...`), which encodes the algorithm version, the cost factor, the salt, and the checksum in a single string.
 
 ## Why someone uses it
-In the realm of security, storing plain-text passwords is an unpardonable sin. Even traditional fast hashing algorithms like MD5 or SHA-1 are now obsolete for password storage because specialized hardware (GPUs and ASICs) can calculate billions of these hashes per second.
+In modern cybersecurity, storing passwords in plain text is a catastrophic failure. Even "fast" hashing algorithms are now considered dangerous for password storage because specialized hardware can crack them in seconds.
 
-Developers use Bcrypt because:
-- **Resilience to Brute Force:** By increasing the cost factor, you can make the hashing process take hundreds of milliseconds. While a human won't notice a 300ms delay, an attacker trying to guess millions of passwords will find it impossible.
-- **Built-in Salting:** Bcrypt automatically generates a unique salt for every hash. This ensures that if two users have the same password, their stored hashes will still be completely different, protecting against "Rainbow Table" attacks.
-- **Adaptive Security:** As hardware becomes faster, developers can simply increase the cost factor to maintain the same level of security without changing their entire architecture.
-- **Cross-Platform Compatibility:** Bcrypt is a mature, battle-tested standard with high-quality implementations in every major programming language (Node.js, Python, Java, Go, PHP, etc.).
+Developers choose Bcrypt for several critical reasons:
+*   **Defense Against GPU/ASIC Attacks:** Algorithms like SHA-256 are designed to be fast, which is great for file integrity but terrible for passwords. Attackers use GPUs to calculate billions of SHA hashes per second. Bcrypt is intentionally slow and memory-intensive, neutralizing this advantage.
+*   **Automatic Salting:** Every Bcrypt hash contains a 128-bit random salt. This ensures that even if two users have the same password (like `password123`), their hashes in the database will be completely different. This makes pre-computed "Rainbow Tables" useless.
+*   **The "Work Factor" (Adaptive Security):** As hardware speeds increase over time (Moore's Law), you can simply increase the "cost" parameter. This doubles the time required to compute the hash, allowing you to maintain the same level of security without changing your code or database schema.
+*   **Mature and Battle-Tested:** Since its introduction at USENIX in 1999 by Niels Provos and David Mazières, Bcrypt has remained the industry gold standard. It has survived decades of cryptographic scrutiny without a major break.
+*   **Cross-Platform Ubiquity:** Whether you are using Node.js (`bcryptjs`), Python (`passlib`), Ruby, or Go, there is a high-quality, native implementation of Bcrypt available.
 
 ## Step-by-step instructions
-### To Generate a Hash:
-1. **Enter your text:** Type the password or string you want to hash into the input field.
-2. **Adjust the Rounds (Optional):** Set the cost factor (usually between 10 and 12 for modern servers). Higher numbers are more secure but take longer.
-3. **Generate:** The hash will appear instantly. It will always start with a prefix like `$2a$`, `$2b$`, or `$2y$`.
-4. **Copy:** Use the copy button to save the hash for your configuration or test database.
-
-### To Verify a Hash:
-1. **Paste the Hash:** Paste the Bcrypt hash you want to verify into the "Hash to check" field.
-2. **Enter the Password:** Type the plain-text password you want to test against that hash.
-3. **Check Result:** The tool will provide a clear "Match" or "No Match" indicator.
-
-## Examples
-### Generating a Secure Hash
-**Input:** `my-secret-password`
-**Cost:** `10`
-**Result:** `$2b$10$eInqF0mPj3P.g8O6pZ6N2uVn5N2G7xH6B1r2i3v4a5s6d7f8g9h0` (Note: Every generation produces a different result due to the unique salt).
+### Hashing a Password
+1.  **Enter Your Secret:** Type the password or string into the "Text to hash" field.
+2.  **Set the Rounds:** Choose a cost factor between 10 and 14. 
+    *   **10:** Suitable for fast, high-traffic user logins.
+    *   **12:** The current industry recommendation for balanced security.
+    *   **14+:** Used for highly sensitive administrative accounts.
+3.  **Generate:** The tool will output a string starting with `$2b$`. Note that clicking "Generate" multiple times with the same password will result in different hashes—this is the salting mechanism at work.
+4.  **Copy:** Save the hash to your database "password" column.
 
 ### Verifying a Match
-**Input Password:** `correct-password`
-**Hash:** `$2b$10$pL3UeR...` (a valid hash for that password)
-**Indicator:** ✅ **Match**
+1.  **Input the Known Hash:** Paste the full `$2x$...` string from your storage into the "Hash to check" field.
+2.  **Input the Password:** Type the plain-text password provided by the user.
+3.  **Analyze the Result:** The tool will provide a cryptographic confirmation. It extracts the salt and cost from the hash string, re-hashes the input password with those exact parameters, and checks if the results match.
+
+## Examples
+### Example 1: Standard User Password
+**Input:** `hunter2`
+**Cost:** 10
+**Result:** `$2b$10$R9h/lS7PNPWm.Yd9Rz3UeuNf8F...`
+This hash is ideal for a standard web application. It takes roughly 100ms to verify on a modern server.
+
+### Example 2: Administrative Account
+**Input:** `Very-Long-And-Secure-Phrase-2024`
+**Cost:** 13
+**Result:** `$2b$13$X7k...`
+By increasing the cost to 13, we make the hashing process 8 times slower ($2^{13} / 2^{10}$) than Example 1, providing significantly more protection for high-value targets.
+
+### Example 3: Legacy PHP Compatibility
+**Hash:** `$2y$10$...`
+The `$2y$` prefix is a variant used in PHP to handle specific issues with non-ASCII characters. Our tool is fully compatible with `$2a$`, `$2b$`, and `$2y$` variants.
 
 ## FAQs
-### What is the "Cost Factor"?
-The cost factor represents the number of iterations performed by the algorithm (specifically, 2 to the power of the cost). A cost of 10 means 1024 iterations. Increasing the cost by 1 doubles the time required to calculate the hash.
+### What is the "Eksblowfish" algorithm?
+Bcrypt is based on a variant of the Blowfish block cipher called **Eksblowfish** (Expensive Key Setup Blowfish). Unlike standard Blowfish, which has a fixed key setup, Eksblowfish makes the key setup phase dependent on both the salt and the password, and it repeats this setup thousands of times (controlled by the cost factor).
 
-### Why does the hash change every time I click refresh?
-Bcrypt uses a cryptographically secure random number generator to create a "salt" for every new hash. This is a feature, not a bug. It prevents attackers from using pre-calculated tables of hashes to find passwords.
+### Why does Bcrypt have a 72-character limit?
+The Blowfish algorithm uses a 448-bit key. In the Bcrypt implementation, the password is used to initialize the state of the cipher. Most libraries truncate the password at 72 bytes. 
+*   **Pro Tip:** If you need to support longer passwords, hash the password with SHA-256 first and then pass the *resulting hash* to Bcrypt.
 
-### Which prefix should I use ($2a, $2b, $2y)?
-For most modern applications, `$2b$` is the current standard. `$2y$` is common in PHP environments to fix a specific historical bug. Our tool handles these differences automatically during verification.
+### Is Argon2 better than Bcrypt?
+**Argon2** is the winner of the Password Hashing Competition (PHC) and is technically superior because it is "memory-hard," meaning it's even harder to crack with specialized hardware. However, Bcrypt remains perfectly secure for 99% of applications and is often easier to implement.
 
-### Is it safe to put my production passwords here?
-Our tool runs **entirely in your browser**. No data is ever sent to our servers. However, as a best practice, we recommend only using this tool for development, testing, and debugging purposes. Never share your production hashes in public environments.
+### Can I "decrypt" a Bcrypt hash?
+No. Bcrypt is a **one-way function**. It is mathematically impossible to turn the hash back into the original password. Verification is only possible by re-hashing a known input and comparing the output.
+
+### How many rounds should I use?
+A good rule of thumb is that a login should take between 200ms and 500ms. If it's faster than 100ms, it's too easy to crack. If it's slower than 1 second, it creates a "Denial of Service" risk where an attacker can overwhelm your CPU by making many login requests.
 
 ## Common mistakes
-1. **Using a Cost Factor that is Too Low:** A cost of 4 or 5 is extremely fast and provides little protection against modern hardware. We recommend a minimum of 10.
-2. **Using a Cost Factor that is Too High:** Setting the cost to 18 or 20 might make your login process take several seconds or even minutes, potentially causing your server to time out or creating a Denial of Service (DoS) vulnerability.
-3. **Comparing Hashes Manually:** Never try to check if two Bcrypt hashes are equal using a string comparison (`hash1 === hash2`). Because of the unique salt, they will never be equal. You must always use a proper Bcrypt verification function.
-4. **Truncating Long Passwords:** Most Bcrypt implementations have a maximum password length of 72 bytes. Any characters beyond that are ignored.
+*   **Low Cost Factor:** Using a cost of 4 or 5 is dangerously fast. It offers almost no protection against modern password-cracking rigs.
+*   **Manual String Comparison:** Never use `if (storedHash == generatedHash)`. Because of the salt, they will never be equal. You must use the `checkPassword` or `verify` function provided by your library.
+*   **Double Salting:** Some developers try to add their own salt *before* passing the password to Bcrypt. This is unnecessary and can actually weaken the security by reducing the entropy of the input.
+*   **Ignoring the Prefix:** Accidentally stripping the `$2b$12$` part of the string. Without this metadata, the verification function won't know which algorithm or cost factor to use.
+*   **Storing in a Small Column:** Ensure your database column is at least 60 characters long (the standard length of a Bcrypt hash).
 
 ## Use cases
-- **Backend Testing:** Manually generating a hash to insert into a "seed" database for local development.
-- **Security Auditing:** Verifying that a legacy hash from an old database actually matches the expected user password.
-- **Learning & Education:** Understanding how the cost factor and salting mechanism work in practice.
-- **Configuration Management:** Creating a hashed password for a configuration file (like a basic auth password for a proxy) where Bcrypt is supported.
+*   **User Authentication:** The primary method for storing passwords in web applications, CMS platforms, and internal tools.
+*   **API Key Hashing:** Instead of storing API keys in plain text, store their Bcrypt hashes. When the client sends the key in a header, hash it and compare.
+*   **Security Audits:** Verifying that a legacy system's "hashed" passwords are using a secure algorithm and an appropriate cost factor.
+*   **Development Seeding:** Generating a known hash to insert into a local database so you can log in as a test user during development.
+*   **Educational Demonstrations:** Showing students and junior developers why salting and work factors are essential for modern security.
 
 ## Related tools
-- **JWT Parser:** For inspecting the tokens that are often generated after a successful Bcrypt password verification.
-- **Hmac Generator:** For understanding simpler hash-based message authentication.
-- **Password Strength Analyser:** To check the quality of the password *before* you hash it.
-- **Token Generator:** For creating the random shared secrets used in secure authentication systems.
-
----
-
-*Note: Security is an evolving field. Always stay updated with the latest recommendations from organizations like OWASP regarding password storage.*
+*   **JWT Parser:** To inspect the tokens often issued after a successful Bcrypt login.
+*   **Password Strength Analyser:** To help users create strong passwords *before* you hash them with Bcrypt.
+*   **Token Generator:** For creating the random "secret keys" used to sign the tokens that Bcrypt-protected accounts use.
+*   **URL Shortener:** To manage the long links often sent in "Password Reset" emails.
+*   **IP Address Lookup:** To track and block "Brute Force" attempts on your login endpoints.

@@ -17,7 +17,7 @@ QR Code Generator
 Color Converter
 And many more useful tools
 🚀 Live Demo
-https://your-domain.com
+https://www.armytool.site/
 
 🛠️ Tech Stack
 Vue 3
@@ -25,7 +25,7 @@ TypeScript
 Vite
 TailwindCSS
 📦 Installation
-git clone https://github.com/yourusername/armytool.git
+git clone https://github.com/jobinblancaflor/IT-tools.git
 
 cd armytool
 

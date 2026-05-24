@@ -2,89 +2,87 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Main Pages -->
   <url>
-    <loc>https://it-tools.tech/</loc>
-    <lastmod>2024-05-20</lastmod>
+    <loc>https://www.armytool.site/</loc>
+    <lastmod>2026-05-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://it-tools.tech/blogs</loc>
-    <lastmod>2024-05-20</lastmod>
+    <loc>https://www.armytool.site/blogs</loc>
+    <lastmod>2026-05-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://it-tools.tech/about</loc>
-    <lastmod>2024-05-20</lastmod>
+    <loc>https://www.armytool.site/about</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.armytool.site/contact</loc>
+    <lastmod>2026-05-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Blog Posts -->
+  <!-- Legal Pages -->
   <url>
-    <loc>https://it-tools.tech/blogs/security-deep-dive-mastering-jwt-bcrypt-and-otp</loc>
+    <loc>https://www.armytool.site/privacy-policy</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.armytool.site/terms-of-service</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- New Blog Posts -->
+  <url>
+    <loc>https://www.armytool.site/blogs/ultimate-developer-toolbox-productivity-guide</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.armytool.site/blogs/mastering-web-security-bcrypt-jwt-otp</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.armytool.site/blogs/art-of-clean-data-json-xml-sql-formatting</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.armytool.site/blogs/networking-deep-dive-ip-subnetting-mac-addresses</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.armytool.site/blogs/frontend-ui-excellence-svg-color-tools</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Legacy Blog Posts -->
+  <url>
+    <loc>https://www.armytool.site/blogs/security-deep-dive-mastering-jwt-bcrypt-and-otp</loc>
     <lastmod>2024-05-20</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://it-tools.tech/blogs/architects-guide-to-data-transformation</loc>
+    <loc>https://www.armytool.site/blogs/architects-guide-to-data-transformation</loc>
     <lastmod>2024-05-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://it-tools.tech/blogs/networking-essentials-ip-mac-url-parsing</loc>
-    <lastmod>2024-05-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://it-tools.tech/blogs/boosting-developer-productivity-docker-git-regex</loc>
-    <lastmod>2024-05-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://it-tools.tech/blogs/typography-and-content-ascii-art-to-text-statistics</loc>
-    <lastmod>2024-05-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://it-tools.tech/blogs/mathematical-precision-math-evaluators-unit-converters</loc>
-    <lastmod>2024-05-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://it-tools.tech/blogs/seo-and-meta-tags-optimize-web-presence</loc>
-    <lastmod>2024-05-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://it-tools.tech/blogs/anatomy-of-perfect-password-strength-key-generation</loc>
-    <lastmod>2024-05-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://it-tools.tech/blogs/modern-web-standards-http-mime-user-agents</loc>
-    <lastmod>2024-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://it-tools.tech/blogs/global-finance-communication-iban-phone-formatting</loc>
-    <lastmod>2024-05-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://it-tools.tech/blogs/frontend-utility-masterclass-svg-camera-color</loc>
-    <lastmod>2024-05-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
 </urlset>

@@ -33,19 +33,27 @@ about:
   content: >
     # About Armytool
 
-    This wonderful website, made with ❤ by [Corentin Thomasset](https://corentin.tech?utm_source=armytool&utm_medium=about) , aggregates useful tools for professionals. If you find it useful, please feel free to share it to people you think may find it useful too and don't forget to bookmark it in your shortcut bar!
+    Armytool is a comprehensive, privacy-focused collection of essential online utilities designed specifically for modern developers, sysadmins, and digital professionals. Our mission is simple: to provide a high-performance, ad-free, and secure "Swiss Army Knife" of tools that help you stay in your creative flow.
 
-    Armytool is open-source (under the GPL-3.0 license) and free, and will always be, but it costs money to host and renew the domain name. If you want to support the work, and encourage more tools to be added, please consider supporting by [sponsoring](https://ko-fi.com/jobinblancaflor).
+    In the fast-paced world of software engineering, small tasks—like formatting JSON, decoding a JWT, or calculating a subnet—can interrupt your concentration. Armytool aggregates these essential utilities into a single, intuitive interface, allowing you to handle these micro-tasks in seconds without leaving your browser.
 
-    ## Technologies
+    ## Our Philosophy: Privacy First
 
-    Armytool is made in Vue.js (Vue 3) with the Naive UI component library and is hosted and continuously deployed by Vercel. Third-party open-source libraries are used in some tools, you may find the complete list in the [package.json](https://github.com/CorentinTh/it-tools/blob/main/package.json) file of the repository.
+    We believe that your data belongs to you. That's why the vast majority of Armytool utilities are **client-side only**. This means that when you use our tools, your data is processed entirely within your own browser's JavaScript engine. Sensitive information like passwords, tokens, and configuration files never leave your machine and are never stored on our servers.
 
-    ## Found a bug? A tool is missing?
+    ## Open Source & Community Driven
 
-    If you need a tool that is currently not present here, and you think can be useful, you are welcome to submit a feature request in the [issues section](https://github.com/CorentinTh/it-tools/issues/new/choose) in the GitHub repository.
+    Armytool is built on the foundation of open-source excellence. We believe in transparency and community collaboration. If you find our tools useful, please consider bookmarking the site and sharing it with your colleagues.
 
-    And if you found a bug, or something doesn't work as expected, please file a bug report in the [issues section](https://github.com/CorentinTh/it-tools/issues/new/choose) in the GitHub repository.
+    ## Supporting Armytool
+
+    Maintaining and expanding Armytool requires time and resources for hosting and domain renewals. If Armytool has saved you time or made your job easier, please consider supporting the project. Your contributions allow us to remain ad-free and continue adding new tools for the community.
+
+    [**Support us on Ko-fi**](https://ko-fi.com/jobinblancaflor) | [**Star us on GitHub**](https://github.com/CorentinTh/it-tools)
+
+    ## Found a Bug or Need a Tool?
+
+    We are constantly improving. If you encounter an issue or have a suggestion for a new utility, please reach out via our [contact form](/contact) or open an issue on our GitHub repository.
 
 404:
   notFound: '404 Not Found'
@@ -408,6 +416,8 @@ blogs:
   author: Author
   date: Published on
   category: Category
+relatedTools:
+  title: Related Tools
 contact:
   title: Contact Us
   description: Have a question, suggestion, or found a bug? We'd love to hear from you!

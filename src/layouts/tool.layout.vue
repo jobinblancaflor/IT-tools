@@ -5,9 +5,12 @@ import type { HeadObject } from '@vueuse/head';
 
 import BaseLayout from './base.layout.vue';
 import FavoriteButton from '@/components/FavoriteButton.vue';
+import RelatedTools from '@/components/RelatedTools.vue';
+import { useToolStore } from '@/tools/tools.store';
 import type { Tool } from '@/tools/tools.types';
 
 const route = useRoute();
+const toolStore = useToolStore();
 
 const head = computed<HeadObject>(() => ({
   title: `${route.meta.name} - Armytool`,
@@ -29,6 +32,12 @@ const i18nKey = computed<string>(() => route.path.trim().replace('/', ''));
 const toolTitle = computed<string>(() => t(`tools.${i18nKey.value}.title`, String(route.meta.name)));
 const toolDescription = computed<string>(() => t(`tools.${i18nKey.value}.description`, String(route.meta.description)));
 
+const currentTool = computed(() => toolStore.tools.find(t => t.path === route.path));
+const relatedTools = computed(() => {
+  if (!currentTool.value) return [];
+  return toolStore.tools.filter(t => t.category === currentTool.value.category && t.path !== route.path);
+});
+
 // Load details.md if it exists
 const toolDetailsFiles = import.meta.glob('../tools/*/details.md');
 const detailsComponent = computed(() => {
@@ -43,28 +52,36 @@ const detailsComponent = computed(() => {
 
 <template>
   <BaseLayout>
-    <div class="tool-layout">
-      <div class="tool-header">
-        <div flex flex-nowrap items-center justify-between>
-          <n-h1>
-            {{ toolTitle }}
-          </n-h1>
+    <div class="tool-layout-container">
+      <div class="main-content">
+        <div class="tool-layout">
+          <div class="tool-header">
+            <div flex flex-nowrap items-center justify-between>
+              <n-h1>
+                {{ toolTitle }}
+              </n-h1>
 
-          <div>
-            <FavoriteButton :tool="{ name: route.meta.name, path: route.path } as Tool" />
+              <div>
+                <FavoriteButton :tool="{ name: route.meta.name, path: route.path } as Tool" />
+              </div>
+            </div>
+
+            <div class="separator" />
+
+            <div class="description">
+              {{ toolDescription }}
+            </div>
           </div>
         </div>
 
-        <div class="separator" />
-
-        <div class="description">
-          {{ toolDescription }}
+        <div class="tool-content">
+          <slot />
         </div>
       </div>
-    </div>
 
-    <div class="tool-content">
-      <slot />
+      <aside v-if="relatedTools.length > 0" class="sidebar">
+        <RelatedTools :tools="relatedTools" />
+      </aside>
     </div>
 
     <div v-if="detailsComponent" class="tool-details-wrapper">
@@ -76,6 +93,56 @@ const detailsComponent = computed(() => {
 </template>
 
 <style lang="less" scoped>
+.tool-layout-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.main-content {
+  flex: 1;
+  width: 100%;
+  max-width: 600px;
+}
+
+.sidebar {
+  width: 280px;
+  position: sticky;
+  top: 20px;
+  margin-top: 40px;
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
+  scrollbar-width: thin;
+
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(128, 128, 128, 0.2);
+    border-radius: 3px;
+  }
+
+  @media (max-width: 1024px) {
+    width: 100%;
+    max-width: 600px;
+    position: static;
+    margin-top: 20px;
+    max-height: none;
+    overflow-y: visible;
+  }
+}
+
 .tool-details-wrapper {
   margin-top: 80px;
   padding: 40px 20px;

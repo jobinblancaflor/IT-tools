@@ -21,6 +21,26 @@ useHead({
       content: computed(() => blog.value?.description || 'Read this article on Armytool.'),
     },
   ],
+  script: [
+    {
+      type: 'application/ld+json',
+      children: computed(() => {
+        if (!blog.value) return '';
+        return JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'BlogPosting',
+          'headline': blog.value.title,
+          'description': blog.value.description,
+          'author': {
+            '@type': 'Organization',
+            'name': 'Armytool Team',
+          },
+          'datePublished': blog.value.date,
+          'url': `https://www.armytool.site/blogs/${blog.value.slug}`,
+        });
+      }),
+    },
+  ],
 });
 
 const BlogContent = computed(() => {

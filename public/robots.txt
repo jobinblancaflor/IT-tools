@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://it-tools.tech/sitemap.xml
+Sitemap: https://www.armytool.site/sitemap.xml
