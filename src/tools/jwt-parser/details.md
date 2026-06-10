@@ -1,73 +1,78 @@
-# JWT Parser: Decode and Inspect JSON Web Tokens Instantly
+# jwt-parser: Professional JWT Analysis & Decoding Tool
 
-In modern web development, **JSON Web Tokens (JWT)** are the standard for stateless authentication and secure information exchange. However, because they are Base64 encoded, they look like a jumble of random characters to the human eye. 
+`jwt-parser` is a specialized developer utility designed to decompose JSON Web Tokens (JWTs) into human-readable components. Unlike generic base64 decoders, it provides semantic context for standard JWT claims and cryptographic algorithms, enabling rapid debugging of authentication and authorization flows.
 
-The **Armytool JWT Parser** is your window into the data that powers your application's security.
+## 1. What the tool does
+The tool performs a non-cryptographic decode of a JWT string. It strips the signature and parses the Base64Url-encoded Header and Payload. 
 
-## 1. What the Tool Does
-The JWT Parser is a specialized utility that takes a JWT string and breaks it down into its three constituent parts:
-- **Header:** Contains metadata about the token, such as the type (JWT) and the signing algorithm (e.g., HS256, RS256).
-- **Payload:** The "claims" or data stored in the token (e.g., user ID, roles, expiration time).
-- **Signature:** The cryptographic proof that the token hasn't been modified.
+**Key capabilities include:**
+- **Header Decomposition:** Extracts metadata such as the signing algorithm (`alg`) and token type (`typ`).
+- **Payload Analysis:** Decodes all claims within the token payload.
+- **Semantic Mapping:** Maps cryptic IANA claim keys (e.g., `sub`, `iat`, `exp`) to their human-readable descriptions.
+- **Temporal Conversion:** Automatically converts Unix Epoch timestamps (seconds) into localized, readable date-time strings.
+- **Algorithm Resolution:** Translates algorithm identifiers (e.g., `RS256`) into their full technical descriptions (e.g., `RSASSA-PKCS1-v1_5 using SHA-256`).
+- **Structured Data Formatting:** Pretty-prints nested JSON objects or arrays found within claims for clear visibility.
 
-Our tool decodes these sections in real-time, providing a clean, formatted JSON view of the contents.
-
-## 2. Why Professionals Use It
-Debugging authentication flows is one of the most common tasks for web developers. This tool is essential for:
-- **Identity Verification:** Checking if a token actually contains the user roles or permissions you expect.
-- **Expiration Debugging:** Instantly seeing the `exp` (expiration) and `iat` (issued at) timestamps in a human-readable format.
-- **Security Audits:** Ensuring that sensitive data hasn't been accidentally included in the public payload.
-- **Local Debugging:** Since our parser is **client-side only**, you can safely inspect production tokens without sending them to a third-party server.
+## 2. Why someone uses it
+Developers and sysadmins use `jwt-parser` to eliminate the "black box" nature of tokens during the following scenarios:
+- **Auth Debugging:** Verifying if a token contains the correct `scope`, `roles`, or `user_id` without needing to write a script.
+- **Expiration Auditing:** Instantly checking the `exp` (Expiration Time) and `nbf` (Not Before) claims to diagnose "Token Expired" errors.
+- **Algorithm Validation:** Confirming that the token is using the expected signing algorithm to prevent "alg: none" attacks or algorithm confusion vulnerabilities.
+- **Issuer Verification:** Ensuring the `iss` (Issuer) claim matches the expected identity provider (IdP) environment.
 
 ## 3. Step-by-Step Instructions
 
-1. **Input:** Paste your complete JWT (the string with two dots) into the input area.
-2. **Auto-Parsing:** The tool will immediately split the token and decode each section.
-3. **Inspect Header:** View the algorithm and token type.
-4. **Inspect Payload:** Navigate through the user data and claims.
-5. **Timestamp Conversion:** The tool automatically converts Unix timestamps (`exp`, `iat`, `nbf`) into human-readable dates.
-6. **Validation:** If the token is malformed or invalid, the tool will provide feedback.
+### Basic Decoding
+1. **Obtain Token:** Copy the JWT string from your application's HTTP headers (usually `Authorization: Bearer <token>`) or browser local storage.
+2. **Input:** Paste the raw JWT string into the parser input field.
+3. **Analyze:** View the parsed **Header** and **Payload** sections.
+4. **Verify:** Check the "Friendly Value" column for date-time conversions and algorithm descriptions.
 
-## 4. Example
+### Advanced Usage: Troubleshooting Token Lifecycle
+1. **Check `iat` (Issued At):** Determine when the token was created to calculate the token's age.
+2. **Check `exp` (Expiration):** Compare the converted date-time against the current system time to determine the exact second the token becomes invalid.
+3. **Inspect Custom Claims:** Look for non-standard claims (those not in the IANA list) to verify application-specific business logic (e.g., `tenant_id` or `subscription_level`).
 
-### JWT String
-`eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ...`
+## 4. Examples
 
-### Parsed Payload
-```json
-{
-  "sub": "1234567890",
-  "name": "John Doe",
-  "iat": 1516239022 (Mon, 15 Jan 2018 14:50:22 GMT)
-}
-```
+### Example: Standard OIDC ID Token
+**Input:** `eyJhbGciOiJSUzI1NiIs...`
+**Parsed Header:**
+- `alg`: RS256 $\\rightarrow$ *RSASSA-PKCS1-v1_5 using SHA-256*
+- `typ`: JWT $\\rightarrow$ *Type*
+
+**Parsed Payload:**
+- `sub`: `1234567890` $\\rightarrow$ *Subject*
+- `iat`: `1623456000` $\\rightarrow$ *June 8, 2021 10:00 AM*
+- `exp`: `1623459600` $\\rightarrow$ *June 8, 2021 11:00 AM*
+- `email`: `dev@example.com` $\\rightarrow$ *Preferred e-mail address*
 
 ## 5. FAQs
+**Q: Does this tool verify the signature of the JWT?**
+**A:** No. This is a **parser**, not a validator. It decodes the content. To verify a signature, you must provide the public key or secret to a cryptographic library (like `jsonwebtoken` or `jose`).
 
-**Q: Does this tool verify the signature?**
-A: This tool is primarily a **decoder and viewer**. Verification requires your private secret or public key, which should never be entered into a web browser for security reasons.
+**Q: Is it safe to paste production tokens here?**
+**A:** The tool performs client-side decoding. However, as a general security practice, avoid pasting sensitive production tokens into any tool unless you are certain the data does not leave your controlled environment.
 
-**Q: Can I edit the JWT here?**
-A: You can edit the JSON payload to see how it would look, but you cannot "re-sign" the token without your server's private key.
+**Q: Why does my date look wrong?**
+**A:** JWT timestamps are in Unix Epoch seconds. The tool converts these to your local system time. If the token was issued in a different timezone, the local conversion is correct for your viewing context.
 
-**Q: Is my token stored?**
-A: No. All parsing happens in your browser. Your authentication tokens remain private and never leave your machine.
+## 6. Common mistakes
+- **Confusing Decoding with Verification:** Assuming that because a token "looks correct" in the parser, it is valid. A token can be decoded even if the signature is forged or the token has expired.
+- **Ignoring the `nbf` (Not Before) Claim:** Forgetting to check if a token is being used *before* its valid start time, leading to intermittent "Unauthorized" errors.
+- **Misinterpreting `sub`:** Assuming the `sub` (Subject) is always a username. In many systems, the `sub` is a GUID or an internal numeric ID.
 
-## 6. Common Mistakes
-- **Confusing JWT with Encryption:** Standard JWTs are **encoded**, not encrypted. Anyone who sees the token can read the data. Never store passwords or private keys inside a JWT.
-- **Ignoring the Expiration:** Many "bugs" in auth systems are simply tokens that have expired. Use this tool to check the `exp` claim first.
-- **Pasting the "Bearer " Prefix:** Ensure you only paste the token string itself, starting with `ey...`.
+## 7. Use cases (Professional/Industrial)
+- **API Gateway Troubleshooting:** A sysadmin at an edge gateway observes 401 errors. They capture a sample token and use `jwt-parser` to find that the `aud` (Audience) claim does not match the gateway's expected ID.
+- **Microservices Auth Debugging:** A developer is implementing RBAC (Role-Based Access Control). They use the tool to ensure the `roles` array in the JWT contains the required `admin` permission before the request hits the backend.
+- **SSO Integration:** When integrating a new SAML/OIDC provider, the engineer uses the tool to map the provider's custom claims to the application's internal user profile.
 
-## 7. Real-World Use Cases
-- **Single Sign-On (SSO):** Inspecting the claims returned by providers like Auth0, Firebase, or AWS Cognito.
-- **Frontend Development:** Checking if your React/Vue app is correctly receiving the user's permissions from the backend.
-- **Backend Testing:** Verifying that your token generation logic is correctly setting the `aud` (audience) and `iss` (issuer) fields.
-
-## 8. Related Tools
-- **JSON Viewer:** For general formatting of the payloads you find in tokens.
-- **Bcrypt Tool:** For the password hashing that usually happens *before* a JWT is issued.
-- **Base64 Converter:** To understand how the individual parts of the JWT are encoded.
-- **Timestamp Converter:** For deeper analysis of the dates found in token claims.
-
----
-*Auth flows decoded. Security simplified. Use Armytool.*
+## 8. Related Resources
+- **Deep Dive**: Read our [JWT Security Deep Dive](/blogs/jwt-security-deep-dive) for a detailed analysis of algorithm confusion and signature verification.
+- **Related Tools**: 
+  - [Bcrypt](/tools/bcrypt): For understanding how passwords that *become* JWTs should be stored.
+  - [Base64 String Converter](/tools/base64-string-converter): For manual decoding of JWT segments.
+- **External Sources**:
+  - [jwt.io](https://jwt.io): The industry-standard web debugger for JWTs.
+  - [Kube-jwt](https://github.com/kubernetes-sigs/kube-jwt): For parsing tokens within Kubernetes clusters.
+  - [JOSE Standard](https://jose.org/): The underlying standard and set of libraries used for actual signing and verification.

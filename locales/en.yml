@@ -31,29 +31,50 @@ home:
     mode: 'Toggle dark/light mode'
 about:
   content: >
-    # About Armytool
+    # About Me
 
-    Armytool is a comprehensive, privacy-focused collection of essential online utilities designed specifically for modern developers, sysadmins, and digital professionals. Our mission is simple: to provide a high-performance, ad-free, and secure "Swiss Army Knife" of tools that help you stay in your creative flow.
+    ## Bridging the Gap Between Code, Automation, and Security
 
-    In the fast-paced world of software engineering, small tasks—like formatting JSON, decoding a JWT, or calculating a subnet—can interrupt your concentration. Armytool aggregates these essential utilities into a single, intuitive interface, allowing you to handle these micro-tasks in seconds without leaving your browser.
+    I am a **Web Developer, Low-Coder, and Automation Expert** dedicated to building digital ecosystems that are as secure as they are efficient. With a professional focus intersecting **Cybersecurity, Web Development, and DevOps**, I specialize in transforming complex manual workflows into streamlined, automated architectures.
 
-    ## Our Philosophy: Privacy First
+    My approach is defined by a commitment to **EEAT (Experience, Expertise, Authoritativeness, and Trustworthiness)**. I don't just implement tools; I architect solutions based on years of hands-on experience in the trenches of web infrastructure and security hardening.
 
-    We believe that your data belongs to you. That's why the vast majority of Armytool utilities are **client-side only**. This means that when you use our tools, your data is processed entirely within your own browser's JavaScript engine. Sensitive information like passwords, tokens, and configuration files never leave your machine and are never stored on our servers.
+    ---
 
-    ## Open Source & Community Driven
+    ## My Expertise
 
-    Armytool is built on the foundation of open-source excellence. We believe in transparency and community collaboration. If you find our tools useful, please consider bookmarking the site and sharing it with your colleagues.
+    ### 🌐 Web Development & Architecture
+    I build scalable, performant web applications with a focus on clean code and maintainable architecture. My expertise spans the full stack, ensuring that the user experience is seamless and the backend is robust.
 
-    ## Supporting Armytool
+    ### ⚡ Automation & Low-Code Engineering
+    I believe that the best code is the code you don't have to write twice. By leveraging low-code platforms alongside custom scripts, I rapidly prototype and deploy automation engines that eliminate operational friction and reduce human error.
 
-    Maintaining and expanding Armytool requires time and resources for hosting and domain renewals. If Armytool has saved you time or made your job easier, please consider supporting the project. Your contributions allow us to remain ad-free and continue adding new tools for the community.
+    ### 🛡️ Cybersecurity & DevOps
+    Security is not a feature; it is a foundation. I integrate security best practices into the DevOps pipeline (DevSecOps), ensuring that every deployment is scrutinized, every dependency is verified, and every endpoint is hardened.
 
-    [**Support us on Ko-fi**](https://ko-fi.com/jobinblancaflor) | [**Star us on GitHub**](https://github.com/CorentinTh/it-tools)
+    ---
 
-    ## Found a Bug or Need a Tool?
+    ## The Genesis of ArmyTool: Privacy & Efficiency
 
-    We are constantly improving. If you encounter an issue or have a suggestion for a new utility, please reach out via our [contact form](/contact) or open an issue on our GitHub repository.
+    In an era of \"software as a service\" where data is often the product, I recognized a critical void: the need for powerful, professional-grade tools that respect the sovereignty of the user's data.
+
+    **ArmyTool was born from this necessity.**
+
+    ### The Philosophy
+    ArmyTool is not just a suite of utilities; it is a manifestation of two core pillars:
+
+    1.  **Uncompromising Privacy**: I believe that your data should remain yours. ArmyTool is designed to operate with a \"privacy-first\" architecture, minimizing external dependencies and ensuring that sensitive information never leaves your controlled environment.
+    2.  **Radical Efficiency**: Complexity is the enemy of security. By automating the mundane and optimizing the critical, ArmyTool empowers users to achieve more with less effort, reducing the \"cognitive load\" of technical management.
+
+    ---
+
+    ## Why Work With Me?
+
+    Whether you are looking to secure a legacy infrastructure, automate a sprawling business process, or build a modern web application from the ground up, I bring a unique blend of **developer agility** and **security discipline**.
+
+    I don't just deliver a product; I deliver a system that is built to last, designed to be secure, and engineered for efficiency.
+
+    **Let's build something that works—and stays secure.**
 
 404:
   notFound: '404 Not Found'
@@ -416,6 +437,13 @@ blogs:
   author: Author
   date: Published on
   category: Category
+sitemap:
+  title: Sitemap
+  description: A complete directory of all resources, tools, and guides available on Armytool.
+  sections:
+    main: Main Pages
+    legal: Legal & Privacy
+    tools: Our Tool Suite
 relatedTools:
   title: Related Tools
 contact:

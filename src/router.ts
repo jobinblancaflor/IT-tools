@@ -66,6 +66,11 @@ const router = createRouter({
       name: 'cookie-policy',
       component: () => import('./pages/CookiePolicy.page.vue'),
     },
+    {
+      path: '/sitemap',
+      name: 'sitemap',
+      component: () => import('./pages/Sitemap.page.vue'),
+    },
     ...toolsRoutes,
     ...toolsRedirectRoutes,
     ...(config.app.env === 'development' ? demoRoutes : []),

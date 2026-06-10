@@ -12,6 +12,9 @@ const year = new Date().getFullYear();
         {{ t('footer.copyright', { year }) }}
       </div>
       <div class="footer-links">
+        <RouterLink to="/sitemap">
+          {{ t('sitemap.title') }}
+        </RouterLink>
         <RouterLink to="/contact">
           {{ t('footer.links.contact') }}
         </RouterLink>
