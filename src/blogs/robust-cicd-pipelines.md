@@ -60,3 +60,4 @@ For a technical utility site, the pipeline focuses on correctness and SEO stabil
 4. **Deploy**: Sync the static assets to a global CDN.
 
 By treating the pipeline as a first-class product, we eliminate manual errors and create a predictable, scalable path from an idea to a live feature.
+

@@ -8,6 +8,9 @@ import FavoriteButton from '@/components/FavoriteButton.vue';
 import RelatedTools from '@/components/RelatedTools.vue';
 import { useToolStore } from '@/tools/tools.store';
 import type { Tool } from '@/tools/tools.types';
+import { blogs } from '@/data/blogs.data';
+import { Book } from '@vicons/tabler';
+import { NIcon } from 'naive-ui';
 
 const route = useRoute();
 const toolStore = useToolStore();
@@ -24,6 +27,24 @@ const head = computed<HeadObject>(() => ({
       content: ((route.meta.keywords ?? []) as string[]).join(','),
     },
   ],
+  script: [
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'SoftwareApplication',
+        'name': route.meta.name,
+        'description': route.meta.description,
+        'applicationCategory': 'DeveloperApplication',
+        'operatingSystem': 'Any',
+        'offers': {
+          '@type': 'Offer',
+          'price': '0',
+          'priceCurrency': 'USD',
+        },
+      }),
+    },
+  ],
 }));
 useHead(head);
 const { t } = useI18n();
@@ -36,6 +57,19 @@ const currentTool = computed(() => toolStore.tools.find(t => t.path === route.pa
 const relatedTools = computed(() => {
   if (!currentTool.value) return [];
   return toolStore.tools.filter(t => t.category === currentTool.value.category && t.path !== route.path);
+});
+
+const relatedBlogs = computed(() => {
+  if (!currentTool.value) return [];
+  const toolKeywords = (route.meta.keywords as string[]) || [];
+  return blogs.filter((blog) => {
+    const matchesCategory = blog.category.toLowerCase() === currentTool.value?.category?.toLowerCase();
+    const matchesTags = blog.tags.some(tag =>
+      toolKeywords.some(keyword => keyword.toLowerCase() === tag.toLowerCase())
+      || currentTool.value?.name.toLowerCase().includes(tag.toLowerCase()),
+    );
+    return matchesCategory || matchesTags;
+  }).slice(0, 3);
 });
 
 // Load details.md if it exists
@@ -79,8 +113,30 @@ const detailsComponent = computed(() => {
         </div>
       </div>
 
-      <aside v-if="relatedTools.length > 0" class="sidebar">
-        <RelatedTools :tools="relatedTools" />
+      <aside class="sidebar">
+        <RelatedTools v-if="relatedTools.length > 0" :tools="relatedTools" />
+
+        <div v-if="relatedBlogs.length > 0" class="related-blogs mt-40px">
+          <div class="sidebar-title mb-20px flex items-center gap-8px text-18px font-600 opacity-80">
+            <NIcon :component="Book" />
+            Authority Guides
+          </div>
+          <div class="flex flex-col gap-16px">
+            <RouterLink
+              v-for="blog in relatedBlogs"
+              :key="blog.slug"
+              :to="`/blogs/${blog.slug}`"
+              class="blog-card block rounded-8px border border-neutral-200 p-16px transition-all hover:bg-neutral-50 dark:border-neutral-800 dark:hover:bg-neutral-900"
+            >
+              <div class="mb-4px text-14px font-600 leading-tight">
+                {{ blog.title }}
+              </div>
+              <div class="text-12px opacity-60">
+                {{ blog.date }} • {{ blog.category }}
+              </div>
+            </RouterLink>
+          </div>
+        </div>
       </aside>
     </div>
 

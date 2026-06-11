@@ -10,7 +10,7 @@ Docker has revolutionized how we build, ship, and run applications. However, man
 
 Docker Compose allows you to define and run multi-container Docker applications using a simple YAML file. It codifies your infrastructure, making it reproducible and easy to share with your team.
 
-If you have a long, complex `docker run` command and want to transition it to a more manageable Compose file, our [Docker Run to Docker Compose Converter](https://it-tools.tech/docker-run-to-docker-compose-converter) is your best friend. It automatically translates your command-line arguments into a clean, well-formatted `docker-compose.yml` file.
+If you have a long, complex `docker run` command and want to transition it to a more manageable Compose file, our [Docker Run to Docker Compose Converter](/docker-run-to-docker-compose-converter) is your best friend. It automatically translates your command-line arguments into a clean, well-formatted `docker-compose.yml` file.
 
 ### Best Practices for Docker Productivity
 - **Keep images small**: Use multi-stage builds and minimal base images like Alpine Linux.
@@ -23,7 +23,7 @@ Git is more than just a version control system; it's a safety net and a collabor
 
 ### The Essential Git Cheatsheet
 
-Whether you're undoing a mistake, merging branches, or rebasing your history, having a quick reference is invaluable. Our [Git Cheatsheet (Git Memo)](https://it-tools.tech/git-memo) provides instant access to the most common Git commands, from basic commits to advanced history manipulation.
+Whether you're undoing a mistake, merging branches, or rebasing your history, having a quick reference is invaluable. Our [Git Cheatsheet (Git Memo)](/git-memo) provides instant access to the most common Git commands, from basic commits to advanced history manipulation.
 
 ### Git Tips for High Performance
 - **Write meaningful commit messages**: Your future self (and your teammates) will thank you.
@@ -38,7 +38,7 @@ Regular Expressions (Regex) are incredibly powerful for pattern matching and tex
 
 Writing Regex in your code and hoping it works is a recipe for disaster. You need a dedicated environment where you can test your expressions against various input strings in real-time.
 
-Our [Regex Tester](https://it-tools.tech/regex-tester) allows you to:
+Our [Regex Tester](/regex-tester) allows you to:
 - **Test in real-time**: See immediately which parts of your input match your expression.
 - **Get detailed explanations**: Understand exactly what each part of your Regex is doing.
 - **Save time**: Debug your expressions in seconds rather than minutes.
@@ -56,4 +56,5 @@ The key to high productivity isn't just knowing about these tools; it's making t
 
 Productivity in software development is about working smarter, not harder. By mastering Docker Compose for orchestration, keeping a handy Git cheatsheet nearby, and using a robust Regex tester, you can eliminate common bottlenecks and focus on what truly matters: building amazing products.
 
-Explore our full suite of [Development Tools](https://it-tools.tech/tools/development) and start supercharging your productivity today!
+Explore our full suite of [Development Tools](/tools/development) and start supercharging your productivity today!
+

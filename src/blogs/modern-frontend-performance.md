@@ -76,3 +76,4 @@ Correct use of `Cache-Control` headers is non-negotiable.
 | **Assets** | Use Brotli compression over Gzip | Smaller bundle sizes |
 
 By focusing on the browser's internal mechanisms rather than just "making things faster," we create applications that feel instantaneous. This technical rigor is what transforms a simple utility into an authoritative resource.
+

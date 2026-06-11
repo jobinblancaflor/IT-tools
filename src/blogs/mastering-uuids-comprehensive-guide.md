@@ -28,7 +28,7 @@ There are several versions of UUIDs, each with its own generation logic:
 
 While you can generate UUIDs in code using libraries like `uuid` in JavaScript or `uuid` in Python, sometimes you just need a few unique IDs for testing or configuration.
 
-Our [UUID Generator](https://it-tools.tech/uuid-generator) allows you to generate up to 50 UUIDs at once, covering versions v1, v3, v4, and v5. It's fast, secure (runs entirely in your browser), and easy to use.
+Our [UUID Generator](/uuid-generator) allows you to generate up to 50 UUIDs at once, covering versions v1, v3, v4, and v5. It's fast, secure (runs entirely in your browser), and easy to use.
 
 ## Best Practices for Using UUIDs
 
@@ -38,4 +38,5 @@ Our [UUID Generator](https://it-tools.tech/uuid-generator) allows you to generat
 
 ## Conclusion
 
-UUIDs are an essential tool in any developer's toolkit. By understanding the different versions and when to use them, you can build more robust, scalable, and secure applications. Check out our [UUID Generator](https://it-tools.tech/uuid-generator) to start creating unique identifiers for your next project!
+UUIDs are an essential tool in any developer's toolkit. By understanding the different versions and when to use them, you can build more robust, scalable, and secure applications. Check out our [UUID Generator](/uuid-generator) to start creating unique identifiers for your next project!
+

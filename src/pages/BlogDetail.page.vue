@@ -3,15 +3,29 @@ import { computed, defineAsyncComponent } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import { useHead } from '@vueuse/head';
 import { NButton, NDivider, NIcon, NSkeleton, NTag } from 'naive-ui';
-import { Calendar, ChevronLeft, Tag, User } from '@vicons/tabler';
+import { Calendar, ChevronLeft, Tag, User, Tools } from '@vicons/tabler';
 import { blogs } from '@/data/blogs.data';
+import { useToolStore } from '@/tools/tools.store';
 
 const route = useRoute();
 const router = useRouter();
 const { t } = useI18n();
+const toolStore = useToolStore();
 
 const slug = computed(() => route.params.slug as string);
 const blog = computed(() => blogs.find(b => b.slug === slug.value));
+
+const relatedTools = computed(() => {
+  if (!blog.value) return [];
+  const blogTags = blog.value.tags || [];
+  return toolStore.tools.filter((tool) => {
+    const matchesCategory = tool.category?.toLowerCase() === blog.value?.category?.toLowerCase();
+    const matchesTags = (tool.keywords || []).some(keyword =>
+      blogTags.some(tag => tag.toLowerCase() === keyword.toLowerCase()),
+    );
+    return matchesCategory || matchesTags;
+  }).slice(0, 4);
+});
 
 useHead({
   title: computed(() => (blog.value ? `${blog.value.title} - Armytool` : 'Blog Not Found')),
@@ -79,10 +93,10 @@ function goBack() {
           <NIcon :component="Calendar" />
           {{ t('blogs.date') }}: {{ blog.date }}
         </div>
-        <div class="flex items-center gap-6px">
+        <RouterLink to="/about" class="flex items-center gap-6px transition-colors hover:text-primary">
           <NIcon :component="User" />
           {{ t('blogs.author') }}: {{ blog.author }}
-        </div>
+        </RouterLink>
         <div class="flex items-center gap-6px">
           <NIcon :component="Tag" />
           {{ t('blogs.category') }}: {{ blog.category }}
@@ -100,6 +114,35 @@ function goBack() {
       <article class="blog-content max-w-none prose dark:prose-invert">
         <component :is="BlogContent" v-if="BlogContent" />
       </article>
+
+      <NDivider class="mt-60px" />
+
+      <div v-if="relatedTools.length > 0" class="related-tools mt-40px">
+        <h3 class="mb-20px flex items-center gap-8px text-24px font-700">
+          <NIcon :component="Tools" />
+          Recommended Tools
+        </h3>
+        <div class="grid grid-cols-1 gap-20px sm:grid-cols-2">
+          <RouterLink
+            v-for="tool in relatedTools"
+            :key="tool.path"
+            :to="tool.path"
+            class="flex items-center gap-16px rounded-12px border border-neutral-200 p-20px transition-all hover:bg-neutral-50 dark:border-neutral-800 dark:hover:bg-neutral-900"
+          >
+            <div class="rounded-8px bg-primary/10 p-10px text-primary">
+              <NIcon size="24" :component="tool.icon || Tools" />
+            </div>
+            <div>
+              <div class="text-16px font-600">
+                {{ tool.name }}
+              </div>
+              <div class="line-clamp-1 text-14px opacity-60">
+                {{ tool.description }}
+              </div>
+            </div>
+          </RouterLink>
+        </div>
+      </div>
 
       <NDivider class="mt-60px" />
 

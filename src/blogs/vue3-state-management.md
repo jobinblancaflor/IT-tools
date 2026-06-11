@@ -62,3 +62,4 @@ By decoupling the favorites logic from the rest of the application, we ensure th
 ## 6. Conclusion
 
 The transition to Pinia reflects a broader trend in frontend engineering: moving away from rigid, opinionated frameworks toward flexible, composable tools. By removing the "ceremony" of mutations and embracing modularity, Pinia allows developers to focus on building features rather than managing the plumbing of their state.
+

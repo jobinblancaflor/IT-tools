@@ -82,3 +82,4 @@ Don't rely on the process merely being "alive." Use the `HEALTHCHECK` instructio
 | **Stability** | Set CPU/Memory limits | Prevents "noisy neighbor" crashes |
 
 By applying these industrial-grade patterns, we transform a simple container into a secure, efficient, and scalable unit of deployment.
+

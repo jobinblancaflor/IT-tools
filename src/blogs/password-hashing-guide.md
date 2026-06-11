@@ -123,3 +123,4 @@ Securing the transition from password verification to session management is crit
 Password security is a game of economics. You cannot make it impossible for an attacker to crack a password, but you can make it so computationally expensive that the effort outweighs the reward. By using **Argon2id**, implementing unique salts, and tuning your cost factors, you ensure that your users' credentials remain secure even in the face of a total database compromise.
 
 **The rule of thumb is simple:** If you are writing your own hashing logic, you are doing it wrong. Use a vetted library, follow the OWASP guidelines, and prioritize "slowness" over convenience.
+

@@ -18,7 +18,7 @@ Base64 is primarily used to embed binary data into text-based formats. Common us
 
 While you can use command-line tools or programming libraries to encode files, an online converter is often the fastest and most convenient method.
 
-Our [Base64 File Converter](https://it-tools.tech/base64-file-converter) allows you to drag and drop any file—whether it's an image, a PDF, or a document—and instantly get its Base64 representation. It even provides the data URI prefix (e.g., `data:image/png;base64,...`), making it ready to use in your code.
+Our [Base64 File Converter](/base64-file-converter) allows you to drag and drop any file—whether it's an image, a PDF, or a document—and instantly get its Base64 representation. It even provides the data URI prefix (e.g., `data:image/png;base64,...`), making it ready to use in your code.
 
 ## Pros and Cons of Using Base64
 
@@ -37,4 +37,5 @@ Our [Base64 File Converter](https://it-tools.tech/base64-file-converter) allows 
 
 ## Conclusion
 
-Base64 encoding is a powerful tool for web developers, offering a simple way to manage and transmit binary data. By understanding its strengths and limitations, you can use it effectively to optimize your applications. Visit our [Base64 File Converter](https://it-tools.tech/base64-file-converter) to start encoding your files today!
+Base64 encoding is a powerful tool for web developers, offering a simple way to manage and transmit binary data. By understanding its strengths and limitations, you can use it effectively to optimize your applications. Visit our [Base64 File Converter](/base64-file-converter) to start encoding your files today!
+

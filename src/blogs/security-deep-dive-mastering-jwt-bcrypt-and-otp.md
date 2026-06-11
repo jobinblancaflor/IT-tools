@@ -13,7 +13,7 @@ A JWT consists of three parts separated by dots:
 2. **Payload**: Contains the "claims" or the information about the user and additional data.
 3. **Signature**: Ensures that the token hasn't been tampered with.
 
-Our [JWT Parser](https://it-tools.tech/jwt-parser) tool is invaluable for developers who need to inspect the contents of a token during development and debugging. It allows you to quickly decode the header and payload without needing to write code.
+Our [JWT Parser](/jwt-parser) tool is invaluable for developers who need to inspect the contents of a token during development and debugging. It allows you to quickly decode the header and payload without needing to write code.
 
 ### Best Practices for JWT Security
 
@@ -35,7 +35,7 @@ Key features of Bcrypt:
 - **Salting**: Bcrypt automatically handles "salts" — random data added to the password before hashing. This ensures that two users with the same password will have different hashes.
 - **Cost Factor**: Bcrypt allows you to set a "work factor" or "cost," which determines how many iterations the algorithm performs. As hardware gets faster, you can increase the cost to keep the hashing process slow.
 
-You can use our [Bcrypt Tool](https://it-tools.tech/bcrypt) to test hashes and understand how different cost factors affect the output.
+You can use our [Bcrypt Tool](/bcrypt) to test hashes and understand how different cost factors affect the output.
 
 ### Implementing Bcrypt
 
@@ -60,7 +60,7 @@ TOTP is an algorithm that computes a one-time password from a shared secret key 
 2. The user scans a QR code containing the secret key.
 3. Every 30 seconds, both the server and the app generate the same 6-digit code based on the secret and the current timestamp.
 
-Our [OTP Generator](https://it-tools.tech/otp-code-generator-and-validator) is a great way to understand this process and verify that your implementation is working correctly.
+Our [OTP Generator](/otp-code-generator-and-validator) is a great way to understand this process and verify that your implementation is working correctly.
 
 ### Benefits of OTP
 
@@ -76,3 +76,4 @@ At Armytool, we've built these utilities to help you navigate the complexities o
 Security is a journey, not a destination. By mastering JWTs for authentication, Bcrypt for data protection, and OTPs for multi-factor verification, you are building a solid foundation for secure applications. Always stay curious, keep up with the latest security advisories, and leverage tools like Armytool to make your development process safer and more efficient.
 
 Remember, the best security is the one that is consistently applied and regularly audited. Happy (and secure) coding!
+

@@ -36,3 +36,4 @@ Security is a journey, not a destination. By mastering these three tools, you're
 If you found this guide helpful, consider supporting Armytool. We're dedicated to providing free, privacy-first security tools for every developer.
 
 [**Buy me a coffee ☕**](https://ko-fi.com/jobinblancaflor) | [**Star us on GitHub ⭐**](https://github.com/CorentinTh/it-tools)
+

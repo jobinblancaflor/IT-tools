@@ -1,8 +1,12 @@
 <script setup lang="ts">
 import { useHead } from '@vueuse/head';
 import { useI18n } from 'vue-i18n';
+import { useToolStore } from '@/tools/tools.store';
+import { blogs } from '@/data/blogs.data';
 
 const { t } = useI18n();
+const toolStore = useToolStore();
+
 useHead({ title: `${t('sitemap.title')} - Armytool` });
 </script>
 
@@ -23,6 +27,15 @@ useHead({ title: `${t('sitemap.title')} - Armytool` });
       </section>
 
       <section>
+        <h3>Authority Articles</h3>
+        <ul>
+          <li v-for="blog in blogs" :key="blog.slug">
+            <router-link :to="`/blogs/${blog.slug}`">{{ blog.title }}</router-link>
+          </li>
+        </ul>
+      </section>
+
+      <section>
         <h3>{{ t('sitemap.sections.legal') }}</h3>
         <ul>
           <li><router-link to="/privacy-policy">{{ t('privacyPolicy.title') }}</router-link></li>
@@ -35,31 +48,14 @@ useHead({ title: `${t('sitemap.title')} - Armytool` });
       <section>
         <h3>{{ t('sitemap.sections.tools') }}</h3>
         <div class="tools-list">
-          <router-link v-for="tool in toolList" :key="tool.id" :to="`/tools/${tool.id}`" class="tool-link">
-            {{ tool.title }}
+          <router-link v-for="tool in toolStore.tools" :key="tool.path" :to="tool.path" class="tool-link">
+            {{ tool.name }}
           </router-link>
         </div>
       </section>
     </div>
   </div>
 </template>
-
-<script lang="ts">
-// Mock for tool list - should ideally come from a store
-const toolList = [
-  { id: 'bcrypt', title: 'Bcrypt Hasher' },
-  { id: 'json-viewer', title: 'JSON Viewer' },
-  { id: 'jwt-parser', title: 'JWT Parser' },
-  { id: 'encryption', title: 'Encryption Tool' },
-  { id: 'basic-auth-generator', title: 'Basic Auth Generator' },
-  { id: 'chmod-calculator', title: 'Chmod Calculator' },
-  { id: 'crontab-generator', title: 'Crontab Generator' },
-  { id: 'docker-run-to-docker-compose-converter', title: 'Docker Compose Converter' },
-  { id: 'hash-text', title: 'Hash Text' },
-  { id: 'password-strength-analyser', title: 'Password Strength Analyser' },
-  { id: 'regex-tester', title: 'Regex Tester' },
-];
-</script>
 
 <style lang="less" scoped>
 .sitemap-page {

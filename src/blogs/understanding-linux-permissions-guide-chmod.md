@@ -42,7 +42,7 @@ To get the octal value for a category, you add the numbers together. For example
 
 ## How to Calculate Chmod Permissions Effortlessly
 
-Calculating octal values in your head can be prone to errors. Our [Chmod Calculator](https://it-tools.tech/chmod-calculator) provides a visual interface where you can simply check boxes for the permissions you want, and it instantly generates both the symbolic and octal representations, along with the exact command you need to run.
+Calculating octal values in your head can be prone to errors. Our [Chmod Calculator](/chmod-calculator) provides a visual interface where you can simply check boxes for the permissions you want, and it instantly generates both the symbolic and octal representations, along with the exact command you need to run.
 
 ## Best Practices for File Security
 
@@ -52,4 +52,5 @@ Calculating octal values in your head can be prone to errors. Our [Chmod Calcula
 
 ## Conclusion
 
-Understanding file permissions is a fundamental skill for anyone working with Linux systems. By mastering the `chmod` command and using the right tools, you can ensure your files are secure and your system is well-managed. Try our [Chmod Calculator](https://it-tools.tech/chmod-calculator) today to simplify your permission management!
+Understanding file permissions is a fundamental skill for anyone working with Linux systems. By mastering the `chmod` command and using the right tools, you can ensure your files are secure and your system is well-managed. Try our [Chmod Calculator](/chmod-calculator) today to simplify your permission management!
+

@@ -11,7 +11,7 @@ Static calculations are simple, but what happens when you need to evaluate compl
 - **Robustness**: Dedicated evaluators handle operator precedence, complex functions (like `sqrt`, `sin`, `cos`), and edge cases more reliably than a simple `eval()` call.
 - **Security**: Using a specialized parser is significantly safer than using `eval()`, which can execute arbitrary code and lead to severe security vulnerabilities.
 
-Our [Math Evaluator](https://it-tools.tech/math-evaluator) tool provides a safe and powerful environment for testing and evaluating mathematical expressions, ensuring your calculations are both accurate and secure.
+Our [Math Evaluator](/math-evaluator) tool provides a safe and powerful environment for testing and evaluating mathematical expressions, ensuring your calculations are both accurate and secure.
 
 ## The Necessity of Accurate Unit Conversion
 
@@ -33,10 +33,10 @@ At Armytool, we've developed a suite of specialized converters to handle these c
 Beyond basic math and unit conversion, developers often face niche calculation requirements.
 
 ### CHMOD Calculator: Mastering Permissions
-Setting file permissions in Unix-like systems using octal notation can be confusing. Our [CHMOD Calculator](https://it-tools.tech/chmod-calculator) provides a visual way to calculate the correct numerical value for any combination of read, write, and execute permissions.
+Setting file permissions in Unix-like systems using octal notation can be confusing. Our [CHMOD Calculator](/chmod-calculator) provides a visual way to calculate the correct numerical value for any combination of read, write, and execute permissions.
 
 ### ETA Calculator: Managing Expectations
-When building applications that perform long-running tasks like file uploads or data processing, providing a realistic Estimated Time of Arrival (ETA) is key to a good user experience. Our [ETA Calculator](https://it-tools.tech/eta-calculator) helps you determine approximate end times based on current progress and speed.
+When building applications that perform long-running tasks like file uploads or data processing, providing a realistic Estimated Time of Arrival (ETA) is key to a good user experience. Our [ETA Calculator](/eta-calculator) helps you determine approximate end times based on current progress and speed.
 
 ## Integrating Mathematical Tools into Your Workflow
 
@@ -46,4 +46,5 @@ Precision isn't just about getting the right answer once; it's about building sy
 
 Mathematics provides the structural integrity of your code. By mastering the tools of the trade — from robust math evaluators to accurate unit converters — you can ensure that your applications are built on a foundation of precision and reliability.
 
-Explore our full range of [Math Tools](https://it-tools.tech/tools/math) and [Measurement Tools](https://it-tools.tech/tools/measurement) to bring a new level of accuracy to your development projects!
+Explore our full range of [Math Tools](/tools/math) and [Measurement Tools](/tools/measurement) to bring a new level of accuracy to your development projects!
+

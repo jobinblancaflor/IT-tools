@@ -14,7 +14,7 @@ JavaScript Object Notation (JSON) has undoubtedly won the war for web-based data
 ### JSON Challenges
 Despite its popularity, JSON has limitations. It doesn't support comments, which makes it less ideal for complex configuration files. It also lacks a native schema definition as robust as XML's XSD, though JSON Schema has filled much of that gap.
 
-Our [JSON Viewer](https://it-tools.tech/json-viewer) and [JSON Formatter](https://it-tools.tech/json-prettify) are essential for making sense of large, minified JSON payloads during development.
+Our [JSON Viewer](/json-viewer) and [JSON Formatter](/json-prettify) are essential for making sense of large, minified JSON payloads during development.
 
 ## YAML: The Configuration King
 
@@ -28,7 +28,7 @@ YAML (YAML Ain't Markup Language) was designed to be even more human-readable th
 ### The Pitfalls of YAML
 YAML's reliance on whitespace can be a source of frustration. A single misplaced space can break an entire configuration file. Furthermore, the YAML specification is complex, leading to potential security vulnerabilities if not handled correctly.
 
-Converting between JSON and YAML is a common task. Our [JSON to YAML Converter](https://it-tools.tech/json-to-yaml-converter) and [YAML to JSON Converter](https://it-tools.tech/yaml-to-json-converter) make this transition seamless and error-free.
+Converting between JSON and YAML is a common task. Our [JSON to YAML Converter](/json-to-yaml-converter) and [YAML to JSON Converter](/yaml-to-json-converter) make this transition seamless and error-free.
 
 ## TOML: Minimalist Configuration
 
@@ -39,7 +39,7 @@ TOML (Tom's Obvious, Minimal Language) was created with a specific goal: to be a
 - **Consistency**: Less ambiguous than YAML.
 - **Organization**: Excellent for hierarchical data without the "indentation hell" of YAML.
 
-When you need to integrate TOML-based projects with other systems, our [TOML to JSON](https://it-tools.tech/toml-to-json) and [TOML to YAML](https://it-tools.tech/toml-to-yaml) tools are ready to help.
+When you need to integrate TOML-based projects with other systems, our [TOML to JSON](/toml-to-json) and [TOML to YAML](/toml-to-yaml) tools are ready to help.
 
 ## XML: The Robust Veteran
 
@@ -53,7 +53,7 @@ Extensible Markup Language (XML) might seem like a relic to some, but it remains
 ### The Weight of XML
 XML is verbose. The closing tags and attribute syntax make it significantly larger than JSON for the same data payload. However, when data integrity and strict structure are paramount, XML is still hard to beat.
 
-Our [JSON to XML](https://it-tools.tech/json-to-xml) and [XML Formatter](https://it-tools.tech/xml-formatter) help you bridge the gap between modern and legacy systems.
+Our [JSON to XML](/json-to-xml) and [XML Formatter](/xml-formatter) help you bridge the gap between modern and legacy systems.
 
 ## The Art of Transformation
 
@@ -68,4 +68,5 @@ Data transformation is more than just changing syntax; it's about preserving mea
 
 Mastering JSON, YAML, TOML, and XML is essential for any modern developer or architect. Each format has its place in the ecosystem, and the ability to move fluidly between them is a superpower. At Armytool, we strive to provide the best-in-class utilities to make these transformations as painless as possible.
 
-Explore our full suite of [Data Tools](https://it-tools.tech/tools/data) to streamline your workflow and ensure your data always lands in the right format, every time.
+Explore our full suite of [Data Tools](/tools/data) to streamline your workflow and ensure your data always lands in the right format, every time.
+

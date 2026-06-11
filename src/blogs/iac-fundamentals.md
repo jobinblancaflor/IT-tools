@@ -67,3 +67,4 @@ Now, the live system is different from the code. The next time Terraform or Ansi
 - **GitOps**: Treat the Git repository as the only source of truth. No manual changes allowed.
 
 By adopting a disciplined IaC approach, teams can reduce deployment time from days to minutes and eliminate the "it works on my machine" problem forever.
+

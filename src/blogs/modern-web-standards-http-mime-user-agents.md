@@ -13,7 +13,7 @@ Hypertext Transfer Protocol (HTTP) status codes are three-digit responses from a
 4. **4xx: Client Error**: The request contains bad syntax or cannot be fulfilled (e.g., `404 Not Found`).
 5. **5xx: Server Error**: The server failed to fulfill an apparently valid request (e.g., `500 Internal Server Error`).
 
-Understanding the nuances between, for example, a `401 Unauthorized` and a `403 Forbidden` is crucial for debugging authentication and authorization issues. Our [HTTP Status Codes](https://it-tools.tech/http-status-codes) reference tool provides a quick and clear breakdown of every standard status code and its meaning.
+Understanding the nuances between, for example, a `401 Unauthorized` and a `403 Forbidden` is crucial for debugging authentication and authorization issues. Our [HTTP Status Codes](/http-status-codes) reference tool provides a quick and clear breakdown of every standard status code and its meaning.
 
 ## MIME Types: Defining Content for the Web
 
@@ -25,7 +25,7 @@ Multipurpose Internet Mail Extensions (MIME) types, also known as Media Types, t
 - `image/png` or `image/svg+xml`: For visual assets.
 - `application/pdf`: For document downloads.
 
-Incorrectly set MIME types can lead to resources not being displayed, downloads being triggered instead of rendering, or even security vulnerabilities like MIME-sniffing attacks. Our [MIME Types](https://it-tools.tech/mime-types) utility helps you quickly find the correct MIME type for any file extension and vice-versa, ensuring your server headers are always accurate.
+Incorrectly set MIME types can lead to resources not being displayed, downloads being triggered instead of rendering, or even security vulnerabilities like MIME-sniffing attacks. Our [MIME Types](/mime-types) utility helps you quickly find the correct MIME type for any file extension and vice-versa, ensuring your server headers are always accurate.
 
 ## User Agents: The Digital Fingerprint
 
@@ -37,7 +37,7 @@ Every time a browser makes a request, it includes a `User-Agent` header string. 
 - **Analytics and Troubleshooting**: Understanding which environments your users are coming from to prioritize testing and bug fixes.
 - **Feature Detection Fallback**: While feature detection is preferred, User Agent parsing can sometimes be used as a last resort for handling environment-specific bugs.
 
-User Agent strings are notoriously messy and difficult to parse manually. Our [User Agent Parser](https://it-tools.tech/user-agent-parser) takes the guesswork out of this process, providing a clean, structured breakdown of any User Agent string.
+User Agent strings are notoriously messy and difficult to parse manually. Our [User Agent Parser](/user-agent-parser) takes the guesswork out of this process, providing a clean, structured breakdown of any User Agent string.
 
 ## Why Adhering to Standards Matters
 
@@ -50,4 +50,5 @@ Standards are what make the web universal. By correctly implementing HTTP status
 
 The modern web is built on a foundation of well-defined standards. At Armytool, we're dedicated to helping you navigate these standards with ease. Whether you're debugging a tricky HTTP response, configuring your server's content-types, or optimizing for a specific device, our utilities are designed to provide the precise information you need to build better web experiences.
 
-Explore our full range of [Web Tools](https://it-tools.tech/tools/web) and master the standards that power the internet!
+Explore our full range of [Web Tools](/tools/web) and master the standards that power the internet!
+

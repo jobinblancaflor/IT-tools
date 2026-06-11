@@ -31,50 +31,38 @@ home:
     mode: 'Toggle dark/light mode'
 about:
   content: >
-    # About Me
+    # About the Developer
 
-    ## Bridging the Gap Between Code, Automation, and Security
+    ## Expertise in Cybersecurity, Web Development, and Automation
 
-    I am a **Web Developer, Low-Coder, and Automation Expert** dedicated to building digital ecosystems that are as secure as they are efficient. With a professional focus intersecting **Cybersecurity, Web Development, and DevOps**, I specialize in transforming complex manual workflows into streamlined, automated architectures.
+    Hi, I'm **[Your Name]**, a Senior Web Developer and Security Researcher with over **[X] years of experience** in the tech industry. I built Armytool to provide a centralized, professional-grade suite of utilities that I personally needed in my daily workflow—without the privacy risks associated with many "online converters."
 
-    My approach is defined by a commitment to **EEAT (Experience, Expertise, Authoritativeness, and Trustworthiness)**. I don't just implement tools; I architect solutions based on years of hands-on experience in the trenches of web infrastructure and security hardening.
-
-    ---
-
-    ## My Expertise
-
-    ### 🌐 Web Development & Architecture
-    I build scalable, performant web applications with a focus on clean code and maintainable architecture. My expertise spans the full stack, ensuring that the user experience is seamless and the backend is robust.
-
-    ### ⚡ Automation & Low-Code Engineering
-    I believe that the best code is the code you don't have to write twice. By leveraging low-code platforms alongside custom scripts, I rapidly prototype and deploy automation engines that eliminate operational friction and reduce human error.
-
-    ### 🛡️ Cybersecurity & DevOps
-    Security is not a feature; it is a foundation. I integrate security best practices into the DevOps pipeline (DevSecOps), ensuring that every deployment is scrutinized, every dependency is verified, and every endpoint is hardened.
+    My professional focus lies at the intersection of **Cybersecurity (DevSecOps), Web Architecture (Vue/TypeScript), and Workflow Automation**. This site is a manifestation of my commitment to **EEAT (Experience, Expertise, Authoritativeness, and Trustworthiness)**.
 
     ---
 
-    ## The Genesis of ArmyTool: Privacy & Efficiency
+    ## My Professional Background
 
-    In an era of \"software as a service\" where data is often the product, I recognized a critical void: the need for powerful, professional-grade tools that respect the sovereignty of the user's data.
+    ### 🌐 Full-Stack Architecture
+    I specialize in building scalable web ecosystems using modern frameworks. My expertise ensures that Armytool is not just a collection of scripts, but a high-performance, responsive platform optimized for the modern developer.
 
-    **ArmyTool was born from this necessity.**
+    ### ⚡ Automation & Low-Code
+    I am a firm believer in "Automate or Die." I develop custom automation engines and leverage low-code platforms to eliminate technical debt and human error in complex environments.
 
-    ### The Philosophy
-    ArmyTool is not just a suite of utilities; it is a manifestation of two core pillars:
-
-    1.  **Uncompromising Privacy**: I believe that your data should remain yours. ArmyTool is designed to operate with a \"privacy-first\" architecture, minimizing external dependencies and ensuring that sensitive information never leaves your controlled environment.
-    2.  **Radical Efficiency**: Complexity is the enemy of security. By automating the mundane and optimizing the critical, ArmyTool empowers users to achieve more with less effort, reducing the \"cognitive load\" of technical management.
+    ### 🛡️ Security & Hardening
+    Security is the core of Armytool. From implementing constant-time comparisons in our Bcrypt tool to ensuring that all data processing happens locally in your browser, I apply enterprise-grade security standards to every utility here.
 
     ---
 
-    ## Why Work With Me?
+    ## The Mission of Armytool: Privacy-First Utility
 
-    Whether you are looking to secure a legacy infrastructure, automate a sprawling business process, or build a modern web application from the ground up, I bring a unique blend of **developer agility** and **security discipline**.
+    I recognized that most "free online tools" are data harvesting traps. Armytool is my response to that: a suite of tools where your data **never leaves your machine**.
 
-    I don't just deliver a product; I deliver a system that is built to last, designed to be secure, and engineered for efficiency.
+    1.  **Zero-Server Processing**: Your sensitive tokens, passwords, and data are processed 100% client-side.
+    2.  **Radical Transparency**: As an open-source project, our logic is verifiable by anyone.
+    3.  **No Data Retention**: We don't store what you input. Period.
 
-    **Let's build something that works—and stays secure.**
+    **Let's build a more secure and efficient web together.**
 
 404:
   notFound: '404 Not Found'
@@ -476,3 +464,4 @@ footer:
     termsOfService: Terms of Service
     disclaimer: Disclaimer
     cookiePolicy: Cookie Policy
+

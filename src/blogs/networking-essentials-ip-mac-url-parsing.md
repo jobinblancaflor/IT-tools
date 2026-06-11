@@ -17,11 +17,11 @@ Subnetting is the process of dividing a single large network into multiple small
 
 You've likely seen IP addresses followed by a slash and a number, like `192.168.1.0/24`. This is Classless Inter-Domain Routing (CIDR) notation. The number after the slash indicates how many bits are used for the network portion of the address, with the remaining bits used for the host portion.
 
-Calculating subnets manually is prone to error. Our [IPv4 Subnet Calculator](https://it-tools.tech/ipv4-subnet-calculator) is a lifesaver for network engineers and developers alike, providing instant information on network addresses, broadcast addresses, and usable host ranges.
+Calculating subnets manually is prone to error. Our [IPv4 Subnet Calculator](/ipv4-subnet-calculator) is a lifesaver for network engineers and developers alike, providing instant information on network addresses, broadcast addresses, and usable host ranges.
 
 ### The Rise of IPv6
 
-As the world runs out of IPv4 addresses, IPv6 is slowly but surely taking over. With its 128-bit address space, it provides an almost infinite number of addresses. Understanding how to work with both is crucial for modern development. Our [IPv4 Address Converter](https://it-tools.tech/ipv4-address-converter) and [IPv6 ULA Generator](https://it-tools.tech/ipv6-ula-generator) help you navigate this transition smoothly.
+As the world runs out of IPv4 addresses, IPv6 is slowly but surely taking over. With its 128-bit address space, it provides an almost infinite number of addresses. Understanding how to work with both is crucial for modern development. Our [IPv4 Address Converter](/ipv4-address-converter) and [IPv6 ULA Generator](/ipv6-ula-generator) help you navigate this transition smoothly.
 
 ## MAC Addresses: The Physical Identity
 
@@ -33,7 +33,7 @@ MAC addresses operate at the Data Link Layer (Layer 2) of the OSI model. They ar
 
 ### MAC Address Lookup
 
-A MAC address contains information about the manufacturer of the network interface. The first three bytes (the Organizationally Unique Identifier or OUI) identify the vendor. Our [MAC Address Lookup](https://it-tools.tech/mac-address-lookup) tool allows you to quickly identify the manufacturer of any device on your network.
+A MAC address contains information about the manufacturer of the network interface. The first three bytes (the Organizationally Unique Identifier or OUI) identify the vendor. Our [MAC Address Lookup](/mac-address-lookup) tool allows you to quickly identify the manufacturer of any device on your network.
 
 ## The Anatomy of a URL
 
@@ -49,7 +49,7 @@ A typical URL looks like this: `https://user:pass@example.com:8080/path/to/resou
 4. **Query Strings**: `?query=value` — Key-value pairs used to pass data to the server.
 5. **Fragment (Anchor)**: `#fragment` — Points to a specific section within the resource.
 
-Parsing these manually in code can be tedious and error-prone. Our [URL Parser](https://it-tools.tech/url-parser) decomposes any URL into its constituent parts, making it easy to inspect and manipulate.
+Parsing these manually in code can be tedious and error-prone. Our [URL Parser](/url-parser) decomposes any URL into its constituent parts, making it easy to inspect and manipulate.
 
 ## Why Networking Tools Matter for Developers
 
@@ -62,4 +62,5 @@ Understanding these concepts is only half the battle. Having the right tools at 
 
 Networking doesn't have to be a mystery. By mastering the fundamentals of IP subnetting, MAC addresses, and URL parsing, you're better equipped to build robust, scalable, and secure applications. At Armytool, we're committed to providing the utilities you need to bridge the gap between abstract networking concepts and practical development reality.
 
-Check out our full range of [Network Tools](https://it-tools.tech/tools/network) and take control of your application's connectivity today!
+Check out our full range of [Network Tools](/tools/network) and take control of your application's connectivity today!
+

@@ -70,3 +70,4 @@ When building a tool site like ArmyTool, these layout principles are critical.
 - **Responsiveness**: By utilizing `auto-fit` and `minmax()`, we ensure that tools like the [JSON Viewer](/tools/json-viewer) or [Bcrypt Hasher](/tools/bcrypt) remain usable on everything from a 4K monitor to a mobile device.
 
 By mastering the synergy between Flexbox and Grid, developers can build interfaces that are not only visually appealing but logically structured and performant.
+

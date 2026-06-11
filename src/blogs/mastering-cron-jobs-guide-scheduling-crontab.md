@@ -35,7 +35,7 @@ For example, `0 5 * * * /path/to/backup.sh` would run a backup script every day 
 
 The crontab syntax can be confusing, and a single mistake can lead to a task running too often or not at all. This is where a visual generator comes in handy.
 
-Our [Crontab Generator](https://it-tools.tech/crontab-generator) allows you to build complex schedules using a simple interface and provides a human-readable description of when the task will run (e.g., "At 05:00 AM, every day"). It also validates your syntax to ensure it's correct before you add it to your server.
+Our [Crontab Generator](/crontab-generator) allows you to build complex schedules using a simple interface and provides a human-readable description of when the task will run (e.g., "At 05:00 AM, every day"). It also validates your syntax to ensure it's correct before you add it to your server.
 
 ## Tips for Managing Cron Jobs
 
@@ -45,4 +45,5 @@ Our [Crontab Generator](https://it-tools.tech/crontab-generator) allows you to b
 
 ## Conclusion
 
-Cron jobs are a powerful way to automate your server tasks and improve efficiency. By mastering the crontab syntax and using the right tools, you can schedule your tasks with precision and peace of mind. Check out our [Crontab Generator](https://it-tools.tech/crontab-generator) to start building your own automated schedules today!
+Cron jobs are a powerful way to automate your server tasks and improve efficiency. By mastering the crontab syntax and using the right tools, you can schedule your tasks with precision and peace of mind. Check out our [Crontab Generator](/crontab-generator) to start building your own automated schedules today!
+

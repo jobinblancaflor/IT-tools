@@ -88,3 +88,4 @@ During the development phase, inspecting tokens is crucial for verifying that cl
 | **Verification** | `jwt.verify(token, key)` | `jwt.verify(token, key, {algorithms: [...]})` | Prevents algorithm confusion |
 
 By adhering to these standards, developers can leverage the scalability of JWTs without introducing the vulnerabilities that lead to systemic breaches. Security is not a one-time setup but a continuous process of auditing and hardening.
+

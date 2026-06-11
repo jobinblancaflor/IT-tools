@@ -103,3 +103,4 @@ MD5 and SHA1 are cryptographically broken. Collision attacks allow attackers to 
 | **API Signatures** | HMAC-SHA256 | Combines a secret key with a hash for authenticity. |
 
 By adhering to these modern standards, developers can move beyond "security by obscurity" toward a mathematically verifiable security posture. Remember: the goal is not to make the system "unhackable"—which is impossible—but to make the cost of an attack higher than the value of the data being protected.
+

@@ -21,7 +21,7 @@ Creating a QR code is simple, but creating an *effective* one requires some cons
 - **Adequate Size:** Ensure the code is large enough to be easily scanned by most smartphones.
 - **Testing:** Always test your QR code with multiple devices and scanning apps before publishing it.
 
-Our [QR Code Generator](https://it-tools.tech/qr-code-generator) makes it easy to create custom QR codes. You can adjust the colors, set the error correction level, and download the resulting image in a high-quality format.
+Our [QR Code Generator](/qr-code-generator) makes it easy to create custom QR codes. You can adjust the colors, set the error correction level, and download the resulting image in a high-quality format.
 
 ## Common Use Cases for QR Codes
 
@@ -29,7 +29,7 @@ Our [QR Code Generator](https://it-tools.tech/qr-code-generator) makes it easy t
 2. **Marketing & Advertising:** Include QR codes on posters, business cards, and flyers to drive traffic to your website or social media.
 3. **Inventory Management:** Tracking items in a warehouse or retail setting.
 4. **Secure Authentication:** Using QR codes for two-factor authentication (2FA) setups.
-5. **Wi-Fi Sharing:** Allowing guests to connect to your Wi-Fi by scanning a code instead of typing a complex password. (Check out our [WiFi QR Code Generator](https://it-tools.tech/wifi-qr-code-generator)).
+5. **Wi-Fi Sharing:** Allowing guests to connect to your Wi-Fi by scanning a code instead of typing a complex password. (Check out our [WiFi QR Code Generator](/wifi-qr-code-generator)).
 
 ## QR Code Safety and Privacy
 
@@ -39,4 +39,5 @@ While QR codes are generally safe, it's important to be cautious:
 
 ## Conclusion
 
-QR codes are a versatile and powerful tool for sharing information quickly and easily. By following best practices and using the right tools, you can leverage QR codes to improve user experience and streamline your workflows. Try our [QR Code Generator](https://it-tools.tech/qr-code-generator) today and start creating your own custom codes!
+QR codes are a versatile and powerful tool for sharing information quickly and easily. By following best practices and using the right tools, you can leverage QR codes to improve user experience and streamline your workflows. Try our [QR Code Generator](/qr-code-generator) today and start creating your own custom codes!
+
