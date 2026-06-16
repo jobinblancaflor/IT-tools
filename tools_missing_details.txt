@@ -36,8 +36,6 @@ text-to-unicode
 token-generator
 toml-to-json
 toml-to-yaml
-ulid-generator
-user-agent-parser
 xml-formatter
 xml-to-json
 yaml-to-json-converter
