@@ -30,39 +30,40 @@ home:
     lightMode: 'Light mode'
     mode: 'Toggle dark/light mode'
 about:
-  content: >
+  content: |
     # About the Developer
 
-    ## Expertise in Cybersecurity, Web Development, and Automation
+    ### Building Secure, Practical Tools for Developers
 
-    Hi, I'm **Jobin Blancaflor**, a Senior Web Developer and Security Researcher with over **12 years of experience** in the tech industry. I built Armytool to provide a centralized, professional-grade suite of utilities that I personally needed in my daily workflow—without the privacy risks associated with many "online converters."
+    I'm **Jobin Blancaflor**, a web developer and security researcher with more than 12 years of experience working across software development, cybersecurity, and automation. Armytool was created from a simple need: having reliable, privacy-focused utilities available in one place without relying on online services that collect or store user data.
 
-    My professional focus lies at the intersection of **Cybersecurity (DevSecOps), Web Architecture (Vue/TypeScript), and Workflow Automation**. This site is a manifestation of my commitment to **EEAT (Experience, Expertise, Authoritativeness, and Trustworthiness)**.
+    Throughout my career, I've worked extensively in DevSecOps, modern web development, and workflow automation. Armytool reflects the same principles I apply in professional projects—performance, security, transparency, and user trust.
 
-    ---
+    ## Background and Areas of Focus
 
-    ## My Professional Background
+    ### Full-Stack Development
 
-    ### 🌐 Full-Stack Architecture
-    I specialize in building scalable web ecosystems using modern frameworks. My expertise ensures that Armytool is not just a collection of scripts, but a high-performance, responsive platform optimized for the modern developer.
+    I design and build modern web applications using technologies such as Vue and TypeScript. Rather than being a collection of isolated scripts, Armytool is structured as a fast, scalable platform designed to provide a smooth experience across devices and browsers.
 
-    ### ⚡ Automation & Low-Code
-    I am a firm believer in "Automate or Die." I develop custom automation engines and leverage low-code platforms to eliminate technical debt and human error in complex environments.
+    ### Automation and Process Optimization
 
-    ### 🛡️ Security & Hardening
-    Security is the core of Armytool. From implementing constant-time comparisons in our Bcrypt tool to ensuring that all data processing happens locally in your browser, I apply enterprise-grade security standards to every utility here.
+    Automation has always been a major part of my work. I enjoy creating systems that remove repetitive tasks, reduce manual errors, and improve efficiency. Whether through custom automation workflows or low-code solutions, my goal is always to simplify complex processes.
 
-    ---
+    ### Security-First Engineering
 
-    ## The Mission of Armytool: Privacy-First Utility
+    Security is a foundational part of every tool on this platform. From secure implementation practices to local browser-based processing, Armytool is built with the same standards I use when developing enterprise applications. Features such as client-side data handling help ensure that sensitive information remains under your control.
 
-    I recognized that most "free online tools" are data harvesting traps. Armytool is my response to that: a suite of tools where your data **never leaves your machine**.
+    ## Why Armytool Exists
 
-    1.  **Zero-Server Processing**: Your sensitive tokens, passwords, and data are processed 100% client-side.
-    2.  **Radical Transparency**: As an open-source project, our logic is verifiable by anyone.
-    3.  **No Data Retention**: We don't store what you input. Period.
+    Many free online tools offer convenience, but often at the cost of privacy. In many cases, uploaded files, passwords, tokens, or other sensitive data pass through external servers without users fully understanding how that information is handled.
 
-    **Let's build a more secure and efficient web together.**
+    Armytool was built as an alternative—a collection of utilities designed around privacy and transparency.
+
+    * **Client-Side Processing:** Data is processed directly in your browser whenever possible, reducing exposure to third-party systems.
+    * **Open and Verifiable:** The project's logic is transparent and can be reviewed by anyone.
+    * **No Data Storage:** Information entered into the tools is not stored or retained.
+
+    My goal is straightforward: provide useful tools that developers, IT professionals, and everyday users can trust while helping promote a safer and more privacy-conscious web.
 
 404:
   notFound: '404 Not Found'
@@ -437,15 +438,499 @@ relatedTools:
 contact:
   title: Contact Us
   description: Have a question, suggestion, or found a bug? We'd love to hear from you!
-  googleForm: Fill out our contact form
+  content: |
+    # Contact Us
+
+    **Last updated:** January 2026
+
+    We love hearing from the people who use Armytool. Whether you are a developer integrating one of our tools into your workflow, an IT professional troubleshooting a security problem, an everyday user who just discovered our site, or a researcher digging into how privacy-first tooling works in practice, your feedback shapes the direction of the platform.
+
+    This page explains the best ways to reach us, what to expect when you do, and what to do if you need to report something urgent like a security vulnerability.
+
+    ## 1. The Best Way to Reach Us
+
+    The fastest and most reliable way to get in touch is through our **Google Form**, which you can open using the button below. The form is short, mobile-friendly, and routes your message to the right person on our team. We aim to respond to all non-urgent messages within **five business days**, and urgent security issues within **two business days**.
+
+    <a href="https://forms.gle/RTqr2ZUrKosiQ4sr8" target="_blank" rel="noopener noreferrer">Open the Contact Form</a>
+
+    The form lets you select the category of your message — bug report, feature request, general question, partnership inquiry, or security disclosure. Picking the right category helps us respond faster.
+
+    ## 2. What to Include in Your Message
+
+    To help us help you, please include as much of the following information as makes sense for your request:
+
+    * **A clear, specific subject** — "Password strength analyzer returns NaN for emoji inputs" is far more useful than "Bug in tool."
+    * **Steps to reproduce** — for bug reports, the exact sequence of actions that led to the issue.
+    * **Expected vs. actual behavior** — what you thought would happen and what actually happened.
+    * **Browser, operating system, and device** — for example, "Chrome 121 on Windows 11, desktop" or "Safari on iOS 17, iPhone 14."
+    * **Screenshots or screen recordings** — when relevant. A short Loom, GIF, or screenshot can replace paragraphs of text.
+    * **Tool URL** — the specific page you were using. Many of our tools have unique URLs that tell us which exact feature is involved.
+    * **For feature requests** — the problem you are trying to solve, not just the solution you have in mind. The solution you suggest is a great starting point, but explaining the underlying need helps us design the right feature.
+
+    The more context you provide, the less back-and-forth is needed before we can take action.
+
+    ## 3. Bug Reports
+
+    If you have found a bug, we want to know about it. Bugs in privacy-related tools are especially important to us, because users trust us with sensitive data. When reporting a bug, please:
+
+    1. Check the relevant tool's page to see if the issue is mentioned in the FAQ or known issues section.
+    2. Test in a different browser, if possible, to help us determine whether the issue is browser-specific.
+    3. Try in an incognito/private window to rule out interference from browser extensions.
+    4. Provide the steps to reproduce and the exact input you used, being careful not to share real secrets, passwords, or personal data.
+
+    If a bug is causing data loss, security exposure, or preventing you from completing a critical task, please mark your message as **urgent** in the form.
+
+    ## 4. Feature Requests
+
+    We maintain a public roadmap and prioritize new tools based on community demand. If you would like to see a new tool added to Armytool, please tell us:
+
+    * What you are trying to accomplish.
+    * What tools you currently use for the task, and what is missing in them.
+    * How often you would use the new tool.
+    * Whether you would be willing to help test an early version.
+
+    Suggestions that solve real problems for many users tend to move to the top of the backlog. Suggestions that solve a problem for one user in a very specific environment are still valuable, but may be better served by linking to a third-party tool.
+
+    ## 5. Security Disclosures
+
+    If you have discovered a security vulnerability in Armytool, please report it to us **privately** through the contact form marked as "Security Disclosure." We take all security reports seriously, and we commit to:
+
+    * **Acknowledging** your report within two business days.
+    * **Investigating** the issue and providing an initial assessment within five business days.
+    * **Fixing** confirmed vulnerabilities as quickly as is reasonably possible, with a target of 30 days for high-severity issues.
+    * **Crediting** you in our security acknowledgements page, unless you prefer to remain anonymous.
+
+    Please do not publicly disclose the vulnerability until we have had a chance to investigate and release a fix. We are happy to coordinate a disclosure timeline that works for both parties.
+
+    ## 6. Partnership and Business Inquiries
+
+    If you are interested in partnership opportunities, sponsored content, integrations, or other business-related inquiries, please select "Partnership Inquiry" in the contact form. We are open to conversations that align with our privacy-first mission. We do not currently sell sponsored tool placements or paid reviews, and we do not plan to do so in the future.
+
+    ## 7. Languages We Speak
+
+    Our team is small, and English is our primary working language. We can read and respond to messages in English fluently. We are happy to use machine translation to assist with other languages, but for nuanced or technical issues, an English message is most likely to get a fast and accurate response.
+
+    The website itself is translated into a number of languages via the language selector. If you spot a translation error, please report it through the form — we rely on community help to keep the translations accurate.
+
+    ## 8. What We Will Never Do
+
+    We want to set clear expectations:
+
+    * We will never ask for your password, API key, or other secrets in a contact form or email.
+    * We will never charge you to use the core tools on the Service. The platform is free and supported by non-intrusive advertising.
+    * We will never sell your contact information to third parties.
+    * We will never share your message publicly without your explicit consent.
+
+    If you receive a message that appears to be from Armytool and asks for any of the above, please treat it as suspicious and report it to us.
+
+    ## 9. Response Times
+
+    We are a small team. Typical response times are:
+
+    * **Security disclosures** — within 2 business days.
+    * **Bug reports affecting functionality** — within 5 business days.
+    * **Feature requests** — within 5 business days for acknowledgement, longer for substantive replies.
+    * **General questions** — within 5 business days.
+    * **Partnership inquiries** — within 10 business days.
+
+    If your request is time-sensitive, please indicate the urgency in your message. We try to be flexible and will move urgent items up the queue.
+
+    ## 10. Other Ways to Stay in Touch
+
+    Beyond direct contact, you can stay updated through:
+
+    * Our **blog**, where we publish guides, security writeups, and platform updates.
+    * Our **RSS feed**, for those who prefer to follow along in a feed reader.
+    * The **about page**, where we share our background and the philosophy behind the platform.
+
+    Thank you for using Armytool. Every message we receive helps us build a better, more private, more useful set of tools for the community.
 privacyPolicy:
   title: Privacy Policy
+  content: |
+    # Privacy Policy
+
+    **Last updated:** January 2026
+
+    At Armytool, privacy is not a feature we bolted on after the fact. It is the foundational design principle that shapes every tool, every page, and every line of code we publish. This Privacy Policy explains in clear, plain language what data we collect, what data we never collect, how we handle the limited information that does flow through our service, and what rights you have over any information that touches our systems.
+
+    We encourage you to read this document end to end. It is intentionally thorough because we believe informed users are empowered users. If anything in this policy is unclear, please reach out via our contact form and we will gladly clarify.
+
+    ## 1. Introduction and Scope
+
+    This Privacy Policy applies to the website located at **www.armytool.site** (the "Site"), all subdomains, and any related services operated by Armytool (collectively, the "Service"). By accessing or using the Service, you agree to the terms set out in this policy.
+
+    Armytool is a privacy-first utility platform for developers, IT professionals, and everyday users. Most of our tools run entirely inside your browser. This means the data you process — passwords, JSON, tokens, files, images, text — generally never leaves your device. Where this is true, there is nothing for us to collect, store, or hand over to third parties. Where it is not true, we tell you explicitly below.
+
+    This policy is written to comply with the General Data Protection Regulation (GDPR), the California Consumer Privacy Act (CCPA/CPRA), and equivalent privacy frameworks around the world. If you are located in the European Economic Area, the United Kingdom, or California, you have specific rights summarized in Section 9.
+
+    ## 2. Information We Do Not Collect
+
+    We want to start with what we **do not** do, because most privacy policies bury this information:
+
+    * **We do not log or store the data you process in our tools.** Whether you generate a token, validate a JWT, format a JSON document, hash a password, or convert an image, the input and output remain in your browser. No copies are kept on our servers, in logs, or in backups.
+    * **We do not require an account.** There is no registration, no email capture, no profile, and no password tied to your use of Armytool. Anonymous use is the default.
+    * **We do not sell your data.** Period. We have never sold user data, and the design of the platform makes it impossible to do so for the vast majority of our tools.
+
+    ## 3. Information We Do Collect
+
+    Despite the privacy-first design, a small amount of information is necessarily collected to operate the Service:
+
+    ### 3.1 Server Logs
+
+    Like virtually every website on the internet, our hosting provider records basic request information when your browser fetches a page. This typically includes your IP address, the requested URL, the response status code, the user-agent string, and a timestamp. These logs are kept for a maximum of 30 days and are used solely for security monitoring, abuse prevention, and capacity planning. They are never linked to a user profile because we have no user profiles.
+
+    ### 3.2 Cookies and Local Storage
+
+    We use a minimal set of cookies and local storage entries to remember your preferences (such as dark mode and language selection) and to support the optional installable app feature. Section 3 covers cookies in detail.
+
+    ### 3.3 Third-Party Advertising
+
+    We display non-personalized advertisements served by **Google AdSense** to support the free availability of the Service. Google may set cookies or read identifiers from your browser to deliver these ads, measure their performance, and prevent fraud. You can opt out of personalized advertising at any time by visiting [Google Ads Settings](https://www.google.com/settings/ads).
+
+    ### 3.4 Third-Party Analytics
+
+    We use privacy-respecting analytics to understand which tools are popular, which pages load slowly, and where users encounter errors. We prefer tools that do not require consent banners, but if the analytics provider we use does collect personal data, we configure it to anonymize IP addresses and disable advertising features.
+
+    ## 4. Client-Side Processing
+
+    The single most important architectural decision we have made is to keep the vast majority of our tools **client-side only**. This means:
+
+    * Your passwords never reach our servers.
+    * Your tokens never reach our servers.
+    * Your personal documents never reach our servers.
+    * Your IP addresses, credit card numbers, API keys, and any other sensitive input never reach our servers.
+
+    The trade-off is that some tools that require server resources (for example, a tool that needs to call an external API to validate a phone number) will, by necessity, send the relevant data to that third-party API. In every such case, we surface this fact clearly inside the tool itself before the request is made, and we link to the third party's privacy policy.
+
+    ## 5. Children's Privacy
+
+    Armytool is intended for users aged 13 and over. We do not knowingly collect personal data from children under 13. If you believe a child has provided personal data to us, please contact us and we will delete it promptly.
+
+    ## 6. International Data Transfers
+
+    Our hosting provider operates data centers in multiple regions. Depending on your location, your requests may be served from a region outside your home jurisdiction. By using the Service, you acknowledge that your information may be transferred to, stored in, and processed in countries other than your own. We rely on standard contractual clauses and equivalent legal mechanisms where required.
+
+    ## 7. Data Security
+
+    We implement industry-standard technical and organizational measures to protect the limited data we do collect. These include HTTPS everywhere, principle-of-least-privilege access controls, regular dependency audits, and a small team with administrative access. No system is perfectly secure, but we design ours to fail closed: even if a log file leaked, it would not contain the data you processed in our tools, because we never receive that data in the first place.
+
+    ## 8. Third-Party Services
+
+    The Service relies on a small number of third-party providers to function. Each one has been selected with privacy in mind:
+
+    * **Hosting provider** — serves the Site over HTTPS.
+    * **Google AdSense** — displays advertisements.
+    * **Analytics provider** — measures aggregate usage.
+    * **CDN** — delivers static assets quickly worldwide.
+
+    Each provider processes data according to its own privacy policy. We encourage you to review those policies.
+
+    ## 9. Your Rights
+
+    Depending on where you live, you may have the right to:
+
+    * Request access to the personal data we hold about you (typically: nothing).
+    * Request correction of inaccurate data.
+    * Request deletion of your data.
+    * Object to processing or withdraw consent.
+    * Lodge a complaint with a supervisory authority.
+
+    Because we collect so little, most of these requests will result in a confirmation that there is no data to provide or delete. To exercise any of these rights, please contact us via the form linked in the footer.
+
+    ## 10. Changes to This Policy
+
+    We may update this Privacy Policy from time to time. When we do, we will revise the "Last updated" date at the top of this page. If the changes are material, we will announce them more visibly through a banner on the Site. Continued use of the Service after changes take effect constitutes acceptance of the updated policy.
+
+    ## 11. Contact
+
+    If you have questions, concerns, or complaints about this Privacy Policy or our data practices, please reach out via our [contact form](/contact). We aim to respond to all privacy-related inquiries within 30 days.
 termsOfService:
   title: Terms of Service
+  content: |
+    # Terms of Service
+
+    **Last updated:** January 2026
+
+    These Terms of Service ("Terms") govern your access to and use of the website located at **www.armytool.site** and all related services operated by Armytool (collectively, the "Service"). By accessing or using the Service, you agree to be bound by these Terms. If you do not agree, please do not use the Service.
+
+    We have written these Terms in plain language wherever possible. Where legal precision is required, we have tried to keep it readable. If anything is unclear, please reach out via our [contact form](/contact) and we will do our best to explain.
+
+    ## 1. Eligibility
+
+    You must be at least 13 years old to use the Service. By using the Service, you represent and warrant that you meet this age requirement and that you have the legal capacity to enter into a binding agreement. If you are using the Service on behalf of an organization, you further represent that you have the authority to bind that organization to these Terms.
+
+    ## 2. Description of the Service
+
+    Armytool provides a collection of free, browser-based utilities for developers, IT professionals, and end users. The Service is offered free of charge and is supported by non-intrusive advertising. The vast majority of our tools process data entirely in your browser and do not transmit your input or output to our servers.
+
+    We may add, modify, or remove tools at any time. We may also change features, user interfaces, supported browsers, and the underlying technology. Where a change materially affects the way the Service operates, we will do our best to provide reasonable notice.
+
+    ## 3. Account Registration
+
+    The Service does not require account registration. You can use all publicly available tools without providing any personal information. If we ever introduce optional accounts, the additional terms will be presented to you at the time of registration.
+
+    ## 4. Acceptable Use
+
+    You agree to use the Service only for lawful purposes and in a way that does not infringe the rights of, restrict, or inhibit anyone else's use and enjoyment of the Service. Specifically, you agree not to:
+
+    * Use the Service to violate any applicable local, state, national, or international law or regulation.
+    * Use the Service to process content that is illegal, infringing, defamatory, obscene, harassing, hateful, or otherwise objectionable.
+    * Attempt to gain unauthorized access to any portion of the Service, other accounts, computer systems, or networks connected to the Service.
+    * Use any robot, spider, scraper, or other automated means to access the Service for any purpose without our express written permission.
+    * Probe, scan, or test the vulnerability of the Service or breach any security or authentication measures.
+    * Circumvent, disable, or otherwise interfere with security-related features of the Service.
+    * Interfere with or disrupt the Service, its servers, or any networks connected to the Service.
+    * Upload or transmit viruses, malware, or any other type of malicious code.
+    * Use the Service to engage in any activity that could disable, overburden, damage, or impair the Service or interfere with any other party's use of the Service.
+
+    ## 5. Open Source License
+
+    The source code of the Service is released under the **GNU General Public License v3.0 (GPL-3.0)**. Subject to the terms of that license, you are free to view, copy, modify, and redistribute the source code. The GPL-3.0 license takes precedence over these Terms in any case of conflict relating to the source code itself.
+
+    Nothing in these Terms restricts your rights under the GPL-3.0 license, and nothing in the GPL-3.0 license restricts your obligations under these Terms with respect to your use of the hosted Service (such as the Acceptable Use provisions above).
+
+    ## 6. Intellectual Property
+
+    The Service, including its design, graphics, logos, branding, and any non-code content (such as blog posts, documentation, and design assets) is the property of Armytool or its licensors and is protected by copyright, trademark, and other intellectual property laws. You may not copy, reproduce, distribute, modify, or create derivative works of these elements without our prior written consent, except as expressly permitted by the GPL-3.0 license for the source code.
+
+    Toolmarks and any feedback you provide may be used by us without restriction or compensation to you, provided that we do not publicly identify you as the source of feedback without your consent.
+
+    ## 7. Third-Party Services and Content
+
+    The Service may display content from, or link to, third-party websites, APIs, or services that are not owned or controlled by Armytool. Such third-party services include Google AdSense for advertising, our analytics provider, and external APIs that some tools may call. We do not endorse and are not responsible for the availability, accuracy, content, privacy practices, or legality of any third-party service. Your use of third-party services is at your own risk and subject to their respective terms and privacy policies.
+
+    ## 8. Disclaimers
+
+    THE SERVICE IS PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.
+
+    We do not warrant that the Service will be uninterrupted, secure, or error-free, that defects will be corrected, or that the Service or the servers that make it available are free of viruses or other harmful components. We do not warrant the accuracy, reliability, or completeness of any content available through the Service, including the output of any tool.
+
+    Some jurisdictions do not allow the exclusion of certain warranties. In such jurisdictions, the exclusions above apply to the maximum extent permitted by law.
+
+    ## 9. Limitation of Liability
+
+    TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL ARMYTOOL, ITS DEVELOPERS, CONTRIBUTORS, OR AFFILIATES BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING, BUT NOT LIMITED TO, LOSS OF DATA, LOSS OF PROFITS, LOSS OF GOODWILL, OR OTHER INTANGIBLE LOSSES, ARISING OUT OF OR IN CONNECTION WITH YOUR USE OF, OR INABILITY TO USE, THE SERVICE.
+
+    In jurisdictions that do not allow the limitation or exclusion of liability for incidental or consequential damages, our liability shall be limited to the maximum extent permitted by law. In any case, our total aggregate liability for any claim arising from or related to the Service shall not exceed one hundred US dollars (USD $100) or the equivalent in your local currency.
+
+    ## 10. Indemnification
+
+    You agree to defend, indemnify, and hold harmless Armytool, its developers, contributors, and affiliates from and against any claims, damages, obligations, losses, liabilities, costs, or expenses (including reasonable attorneys' fees) arising from your use of the Service, your violation of these Terms, or your violation of any third party's rights.
+
+    ## 11. Termination
+
+    We reserve the right, at our sole discretion, to suspend or terminate your access to the Service at any time, with or without notice, for conduct that we believe violates these Terms or is otherwise harmful to other users, us, or third parties. Because we do not maintain user accounts, termination primarily takes the form of IP-level blocks used in response to abuse.
+
+    You may stop using the Service at any time for any reason. Upon termination, the provisions of these Terms that by their nature should survive termination shall survive, including, but not limited to, ownership provisions, warranty disclaimers, indemnity, and limitations of liability.
+
+    ## 12. Governing Law
+
+    These Terms shall be governed by and construed in accordance with the laws of the jurisdiction in which the operator of the Service resides, without giving effect to any conflict of law provisions. Any disputes arising from or related to these Terms or your use of the Service shall be resolved in the competent courts of that jurisdiction, unless mandatory consumer protection laws in your country of residence provide otherwise.
+
+    ## 13. Changes to These Terms
+
+    We may update these Terms from time to time. When we do, we will revise the "Last updated" date at the top of this page. Material changes will be highlighted through a notice on the Site. Your continued use of the Service after changes take effect constitutes acceptance of the updated Terms.
+
+    ## 14. Severability
+
+    If any provision of these Terms is held to be invalid, illegal, or unenforceable, such provision shall be struck and the remaining provisions shall remain in full force and effect. The invalid provision shall be replaced by a valid provision that most closely reflects the original intent.
+
+    ## 15. Contact
+
+    If you have any questions about these Terms of Service, please contact us via the [contact form](/contact).
 disclaimer:
   title: Disclaimer
+  content: |
+    # Disclaimer
+
+    **Last updated:** January 2026
+
+    The information and tools provided by Armytool (the "Service") are made available for general informational, educational, and productivity purposes only. By accessing or using the Service, you acknowledge and agree to the terms of this Disclaimer. If you do not agree, please discontinue use of the Service.
+
+    We have done our best to make the Service accurate, reliable, and useful. However, the nature of software, the diversity of environments in which it runs, and the impossibility of testing every edge case mean that we cannot guarantee perfection. This Disclaimer explains the limits of our responsibility so that you can make informed decisions about how to use the Service.
+
+    ## 1. No Professional Advice
+
+    The content available through the Service — including but not limited to text, graphics, code examples, documentation, blog posts, and tool outputs — is provided for general informational and educational purposes only. It does **not** constitute professional advice of any kind, including but not limited to:
+
+    * Legal advice
+    * Financial advice
+    * Medical advice
+    * Tax advice
+    * Cybersecurity advice specific to your environment
+    * Engineering or architectural advice tailored to your systems
+
+    You should not act, or refrain from acting, on the basis of any content made available through the Service without first seeking appropriate professional advice from a qualified expert who is aware of your specific circumstances. Your use of the Service and any reliance you place on its output is solely at your own risk.
+
+    ## 2. "As Is" and "As Available"
+
+    The Service is provided on an "AS IS" and "AS AVAILABLE" basis without any representations, warranties, or conditions of any kind, express or implied, including, but not limited to, implied warranties or conditions of merchantability, fitness for a particular purpose, non-infringement, or accuracy.
+
+    We do not warrant that:
+
+    * The Service will be uninterrupted, secure, or free of errors, bugs, or other harmful components.
+    * The results obtained from the use of the Service will be accurate or reliable.
+    * The quality of any information, tool, or service obtained through the Service will meet your expectations.
+    * Defects in the Service will be corrected.
+
+    Some jurisdictions do not allow the exclusion of certain warranties. In such jurisdictions, the exclusions above apply to the maximum extent permitted by law.
+
+    ## 3. Tool Output Disclaimer
+
+    Many of the tools available on the Service produce output based on algorithms, heuristics, validations, or transformations. Examples include password strength analyzers, JSON validators, regex testers, and hash generators. While we strive to make these tools correct, edge cases, library limitations, and evolving standards mean that the output may be incorrect, incomplete, or unsuitable for production use.
+
+    **Always verify the output of any tool before relying on it for security-critical, business-critical, or production purposes.** Do not use any tool on the Service as the sole basis for decisions that could result in harm to people, data loss, financial loss, or legal liability.
+
+    ## 4. External Links Disclaimer
+
+    The Service may contain links to other websites, APIs, or content belonging to or originating from third parties. Such external links are provided for your convenience only. We do not investigate, monitor, or check the accuracy, adequacy, validity, reliability, availability, or completeness of any external link or the content behind it.
+
+    The inclusion of any external link does not imply our endorsement, sponsorship, or recommendation of the linked website, its operators, or its content. We are not responsible for the privacy practices, terms of service, or content of any third-party website. Your use of any third-party website is at your own risk and subject to the third party's terms and policies.
+
+    ## 5. Third-Party Tools and Libraries
+
+    The Service is built using a variety of open-source libraries and third-party tools. While we select these components with care, we do not control their development and cannot guarantee that they are free of defects or vulnerabilities. We perform regular dependency audits and apply security patches promptly when feasible, but we make no warranty as to the fitness of any particular component for any particular use.
+
+    ## 6. Security and Cryptography Disclaimer
+
+    Several of our tools deal with security and cryptography, including but not limited to password generators, password strength analyzers, hash generators, JWT encoders/decoders, and Bcrypt verifiers. While these tools are designed with care, the security of any cryptographic system depends on many factors beyond the tool itself, including:
+
+    * The security of the device on which the tool runs.
+    * The trustworthiness of the input data.
+    * The threat model relevant to the use case.
+    * The correct selection of algorithms and parameters.
+
+    We make no warranty that the use of our tools will make your data, accounts, or systems secure. Cryptography is a deep, evolving field, and best practices change. Consult a qualified security professional for advice tailored to your environment.
+
+    ## 7. Limitation of Liability
+
+    TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL ARMYTOOL, ITS DEVELOPERS, CONTRIBUTORS, OR AFFILIATES BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO LOSS OF DATA, LOSS OF PROFIT, LOSS OF GOODWILL, OR OTHER INTANGIBLE LOSSES, ARISING OUT OF OR IN CONNECTION WITH YOUR USE OF, OR INABILITY TO USE, THE SERVICE OR ANY CONTENT OBTAINED THROUGH IT, EVEN IF WE HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+
+    In jurisdictions that do not allow the limitation or exclusion of liability for incidental or consequential damages, our liability shall be limited to the maximum extent permitted by law.
+
+    ## 8. Changes to This Disclaimer
+
+    We may update this Disclaimer from time to time. When we do, we will revise the "Last updated" date at the top of this page. Your continued use of the Service after changes take effect constitutes acceptance of the updated Disclaimer.
+
+    ## 9. Contact
+
+    If you have any questions about this Disclaimer, please contact us via the [contact form](/contact). We will do our best to clarify the scope or limits of any provision in this document, but the formal language of this Disclaimer remains the legally binding version.
 cookiePolicy:
   title: Cookie Policy
+  content: |
+    # Cookie Policy
+
+    **Last updated:** January 2026
+
+    This Cookie Policy explains what cookies are, how and why Armytool (the "Service") uses them, and what choices you have. We have tried to keep this document plain and practical. If anything is unclear, please reach out via our [contact form](/contact).
+
+    By using the Service, you consent to the use of cookies in accordance with this policy. You can withdraw or modify your consent at any time by following the instructions in Section 6 below.
+
+    ## 1. What Are Cookies?
+
+    Cookies are small text files that are placed on your computer or mobile device when you visit a website. They are widely used to make websites work more efficiently and to provide information to website operators. Cookies set by the website you are visiting are called "first-party cookies." Cookies set by parties other than the website you are visiting are called "third-party cookies."
+
+    In addition to cookies, the Service may use similar technologies such as:
+
+    * **Local storage** — small data items stored by your browser that persist across sessions.
+    * **Session storage** — similar to local storage but cleared when you close your browser.
+    * **Web beacons / pixels** — small transparent images embedded in pages or emails that allow the operator to count visits or recognize access.
+    * **IndexedDB** — a more capable client-side store used by some web applications.
+
+    For simplicity, this policy refers to all of these technologies collectively as "cookies."
+
+    ## 2. Why We Use Cookies
+
+    We use cookies for a small number of clearly defined purposes. We do not use cookies to track you across unrelated websites, build advertising profiles, or sell your behavior to data brokers. Specifically, we use cookies to:
+
+    ### 2.1 Remember Your Preferences
+
+    When you choose a theme (light, dark, or system) or a language, we store that preference in a cookie or in local storage so that the choice persists on subsequent visits. This is necessary for the Service to feel responsive to your settings.
+
+    ### 2.2 Make the Service Work
+
+    Some cookies are strictly necessary to deliver the Service. For example, we may use a cookie to remember whether you have dismissed a banner, accepted a prompt, or completed a one-time action. Without these cookies, parts of the Service may not function correctly.
+
+    ### 2.3 Measure Aggregate Usage
+
+    We use privacy-respecting analytics to understand which tools are popular, where users encounter errors, and how the Service performs. Where possible, we prefer analytics solutions that do not require cookies. Where cookies are used, we configure them to minimize identifiability (for example, by stripping the last octet of IP addresses).
+
+    ### 2.4 Support Advertising
+
+    Because the Service is free, we display advertising served by Google AdSense. AdSense uses cookies to:
+
+    * Deliver ads that are relevant to you and your interests.
+    * Limit the number of times you see the same ad.
+    * Measure the effectiveness of ads.
+    * Detect and prevent fraud.
+
+    You can opt out of personalized advertising by visiting [Google Ads Settings](https://www.google.com/settings/ads).
+
+    ### 2.5 Support the Installable App
+
+    If you install Armytool as a Progressive Web App (PWA), your browser may store a small amount of data locally to enable offline functionality and to remember that the app is installed.
+
+    ## 3. Types of Cookies We Use
+
+    We classify the cookies we use into the following categories:
+
+    * **Strictly necessary cookies** — required for the Service to operate. These cannot be disabled.
+    * **Preference cookies** — remember your choices such as theme and language.
+    * **Analytics cookies** — measure aggregate, anonymized usage.
+    * **Advertising cookies** — set by Google AdSense to support ad delivery.
+
+    The exact list of cookies, their providers, and their lifespans can change as we add, remove, or replace services. The most up-to-date inventory is maintained in our [privacy policy](/privacy-policy).
+
+    ## 4. Third-Party Cookies
+
+    Some cookies on the Service are set by third parties. The most important third parties are:
+
+    * **Google AdSense** — for advertising. See Google's [privacy policy](https://policies.google.com/privacy) and [ads policy](https://policies.google.com/technologies/ads) for details.
+    * **Analytics providers** — for aggregate usage measurement. We prefer providers that do not require consent, but where they do, we configure them to operate without personal identifiers.
+
+    We do not control how third parties use cookies set by their services. Their use is governed by their own privacy and cookie policies.
+
+    ## 5. Cookies and Personal Data
+
+    Most of the cookies we use do not, by themselves, identify you personally. They may, however, be considered personal data under laws such as the GDPR when combined with other data. We treat any data that could be used to identify you as personal data, regardless of the technical definition, and we protect it accordingly.
+
+    ## 6. Your Choices and Controls
+
+    You have several ways to control or limit cookies:
+
+    ### 6.1 Browser Settings
+
+    Most browsers allow you to:
+
+    * See what cookies are stored and delete them individually or in bulk.
+    * Block third-party cookies.
+    * Block all cookies from specific sites.
+    * Block all cookies from being set.
+    * Clear all stored data when you close the browser.
+
+    Note that blocking all cookies may break parts of the Service or make it less convenient to use.
+
+    ### 6.2 Opt Out of Personalized Advertising
+
+    * Visit [Google Ads Settings](https://www.google.com/settings/ads) to opt out of personalized ads from Google.
+    * Visit [www.aboutads.info](https://www.aboutads.info) to opt out of personalized ads from many participating advertisers.
+    * Use the [DAA Webchoices tool](https://optout.aboutads.info) to manage interest-based advertising preferences.
+
+    ### 6.3 Do Not Track
+
+    Some browsers offer a "Do Not Track" (DNT) feature. We honor DNT signals by disabling non-essential cookies and analytics where technically feasible.
+
+    ### 6.4 Clear Your Data
+
+    You can clear cookies and site data stored by the Service at any time through your browser settings. After clearing, the Service will behave as if it is your first visit, and your preferences will need to be set again.
+
+    ## 7. Changes to This Cookie Policy
+
+    We may update this Cookie Policy from time to time to reflect changes in technology, regulation, or our practices. When we do, we will revise the "Last updated" date at the top of this page. If the changes are material, we will display a more prominent notice.
+
+    ## 8. Contact
+
+    If you have questions about this Cookie Policy, please contact us via the [contact form](/contact). We aim to respond within 30 days.
 faq:
   title: Frequently Asked Questions
   q1: Is Armytool free to use?

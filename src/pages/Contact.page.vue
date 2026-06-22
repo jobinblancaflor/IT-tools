@@ -8,16 +8,10 @@ useHead({ title: `${t('contact.title')} - Armytool` });
 </script>
 
 <template>
-  <div class="contact-page">
-    <n-h1 align="center">
-      {{ t('contact.title') }}
-    </n-h1>
-    <div class="content">
-      <p class="description">
-        {{ t('contact.description') }}
-      </p>
-
-      <div class="form-link-wrapper">
+  <div class="px-20px pb-100px pt-50px">
+    <div class="blog-content mx-auto max-w-800px prose dark:prose-invert">
+      <c-markdown :markdown="t('contact.content')" />
+      <div class="form-link-wrapper mt-30px text-center">
         <n-button
           type="primary"
           size="large"
@@ -26,7 +20,7 @@ useHead({ title: `${t('contact.title')} - Armytool` });
           rel="noopener noreferrer"
           tag="a"
         >
-          {{ t('contact.googleForm') }}
+          Open Contact Form
           <template #icon>
             <n-icon :component="IconExternalLink" />
           </template>
@@ -37,23 +31,51 @@ useHead({ title: `${t('contact.title')} - Armytool` });
 </template>
 
 <style lang="less" scoped>
-.contact-page {
-  max-width: 800px;
-  margin: 60px auto;
-  padding: 0 20px;
+.blog-content {
+  font-size: 18px;
+  line-height: 1.8;
 
-  .content {
-    margin-top: 40px;
-    text-align: center;
+  ::v-deep(h1) {
+    font-size: 32px;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
 
-    .description {
-      font-size: 1.2rem;
-      margin-bottom: 40px;
-      opacity: 0.8;
-    }
+  ::v-deep(h2) {
+    font-size: 26px;
+    font-weight: 700;
+    margin-top: 35px;
+    margin-bottom: 15px;
+  }
 
-    .form-link-wrapper {
-      margin-top: 20px;
+  ::v-deep(h3) {
+    font-size: 22px;
+    font-weight: 600;
+    margin-top: 30px;
+    margin-bottom: 12px;
+  }
+
+  ::v-deep(p) {
+    margin-bottom: 20px;
+  }
+
+  ::v-deep(ul), ::v-deep(ol) {
+    margin-bottom: 20px;
+    padding-left: 20px;
+  }
+
+  ::v-deep(li) {
+    margin-bottom: 8px;
+  }
+
+  ::v-deep(a) {
+    color: #18a058;
+    text-decoration: none;
+    transition: color 0.2s;
+
+    &:hover {
+      text-decoration: underline;
     }
   }
 }
