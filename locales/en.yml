@@ -802,17 +802,23 @@ disclaimer:
 
     We make no warranty that the use of our tools will make your data, accounts, or systems secure. Cryptography is a deep, evolving field, and best practices change. Consult a qualified security professional for advice tailored to your environment.
 
-    ## 7. Limitation of Liability
+    ## 7. No Military or Government Affiliation
+
+    Despite the word "Army" in its name, Armytool is an independent, privately operated website. It is not affiliated with, endorsed by, sponsored by, or connected to any army, armed force, defense contractor, government agency, or official military organization. Nothing on this site is official military guidance.
+
+    Armytool is a collection of general-purpose developer and productivity utilities. It does not sell, promote, or facilitate the acquisition of weapons, ammunition, or weapon parts, and it does not publish instructions for building or modifying weapons. Where a tool touches on terminology that is also used by the military (for example, the NATO phonetic alphabet), it is presented purely as general reference and educational material.
+
+    ## 8. Limitation of Liability
 
     TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL ARMYTOOL, ITS DEVELOPERS, CONTRIBUTORS, OR AFFILIATES BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO LOSS OF DATA, LOSS OF PROFIT, LOSS OF GOODWILL, OR OTHER INTANGIBLE LOSSES, ARISING OUT OF OR IN CONNECTION WITH YOUR USE OF, OR INABILITY TO USE, THE SERVICE OR ANY CONTENT OBTAINED THROUGH IT, EVEN IF WE HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
 
     In jurisdictions that do not allow the limitation or exclusion of liability for incidental or consequential damages, our liability shall be limited to the maximum extent permitted by law.
 
-    ## 8. Changes to This Disclaimer
+    ## 9. Changes to This Disclaimer
 
     We may update this Disclaimer from time to time. When we do, we will revise the "Last updated" date at the top of this page. Your continued use of the Service after changes take effect constitutes acceptance of the updated Disclaimer.
 
-    ## 9. Contact
+    ## 10. Contact
 
     If you have any questions about this Disclaimer, please contact us via the [contact form](/contact). We will do our best to clarify the scope or limits of any provision in this document, but the formal language of this Disclaimer remains the legally binding version.
 cookiePolicy:

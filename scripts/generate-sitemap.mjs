@@ -5,7 +5,17 @@ const getTools = () => {
   const toolsPath = path.join(process.cwd(), 'src/tools');
   return fs.readdirSync(toolsPath, { withFileTypes: true })
     .filter(dirent => dirent.isDirectory())
-    .map(dirent => dirent.name);
+    .map(dirent => dirent.name)
+    .map((name) => {
+      // The public route is declared in the tool's index.ts and can differ from the folder name.
+      const indexPath = path.join(toolsPath, name, 'index.ts');
+      if (!fs.existsSync(indexPath)) {
+        return null;
+      }
+      const match = fs.readFileSync(indexPath, 'utf8').match(/path:\s*'\/([^']+)'/);
+      return match ? match[1] : null;
+    })
+    .filter(Boolean);
 };
 
 const getBlogs = () => {
@@ -41,6 +51,7 @@ addUrl('/privacy-policy', '0.5', 'monthly');
 addUrl('/terms-of-service', '0.5', 'monthly');
 addUrl('/cookie-policy', '0.5', 'monthly');
 addUrl('/disclaimer', '0.5', 'monthly');
+addUrl('/sitemap', '0.3', 'monthly');
 
 // Blogs
 blogs.sort().forEach(b => addUrl(`/blogs/${b}`, '0.7', 'monthly'));
@@ -51,4 +62,4 @@ tools.sort().forEach(t => addUrl(`/${t}`, '0.8', 'weekly'));
 xml += '</urlset>';
 
 fs.writeFileSync('public/sitemap.xml', xml);
-console.log('Sitemap generated successfully with ' + (tools.length + blogs.length + 8) + ' URLs.');
+console.log('Sitemap generated successfully with ' + (tools.length + blogs.length + 9) + ' URLs.');

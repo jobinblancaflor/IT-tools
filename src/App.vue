@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { RouterView, useRoute } from 'vue-router';
+import { useHead } from '@vueuse/head';
 import { NGlobalStyle, NMessageProvider, NNotificationProvider, darkTheme } from 'naive-ui';
 import { darkThemeOverrides, lightThemeOverrides } from './themes';
 import { layouts } from './layouts';
@@ -11,6 +12,18 @@ const styleStore = useStyleStore();
 
 const theme = computed(() => (styleStore.isDarkTheme ? darkTheme : null));
 const themeOverrides = computed(() => (styleStore.isDarkTheme ? darkThemeOverrides : lightThemeOverrides));
+
+// index.html is shared by every route, so each route must declare its own canonical URL.
+// Unknown URLs are served with HTTP 200 by the SPA fallback, so keep them out of the index.
+const SITE_ORIGIN = 'https://www.armytool.site';
+const isNotFound = computed(() => route.name === 'NotFound');
+useHead(computed(() => {
+  if (isNotFound.value) {
+    return { meta: [{ name: 'robots', content: 'noindex, follow' }] };
+  }
+  const path = route.path === '/' ? '' : route.path.replace(/\/+$/, '');
+  return { link: [{ rel: 'canonical', href: `${SITE_ORIGIN}${path}` }] };
+}));
 
 const { locale } = useI18n();
 
